@@ -2,12 +2,8 @@
 
 ### Hardware
 
-+ List hardware here, or delete section.
++ Any computer that can run Python 3
 
 ### Software
 
-+ List software here, or delete section.
-
-### Additional Resources
-
-+ List additional resources, or delete section.
++ Python 3

@@ -4,7 +4,7 @@ All contributions are assumed to be licensed under the same licence as the sourc
 
 ## Issues
 
-If you find a mistake, bug or other problem, please [open an issue](https://github.com/raspberrypilearning/repo-name/issues) in this repository.
+If you find a mistake, bug or other problem, please [open an issue](https://github.com/raspberrypilearning/deck-of-cards/issues) in this repository.
 
 ## Pull Requests
 
@@ -16,4 +16,4 @@ Please note that sometimes things are done for pedagogical reasons so changes wh
 
 ## Derivatives
 
-See [LICENCE.md](LICENCE.md) for content licence. The licence must remain in all derivatives of this work.
+See [LICENSE.md](LICENSE.md) for content licence. The licence must remain in all derivatives of this work.
