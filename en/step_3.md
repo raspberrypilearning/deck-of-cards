@@ -1,6 +1,6 @@
 ## Create a class
 
-You can follow the video for this step or use the written instructions.
+You can choose whether to watch the video for each step of this resource, or use the written instructions.
 
 <video width="560" height="315" controls>
 <source src="resources/clip1.mp4" type="video/mp4">
