@@ -32,4 +32,4 @@ def __repr__(self):
 
 For example, this will print "5 of spades" if `self.number` is `"5"` and `self.suit` is `"spades"`.
 
-+ Run the program again and check that your new way of representing the object as text works.
++ Run the program again and check that your new way of representing the object as text works. You can also customise this representation to your own liking if you prefer.

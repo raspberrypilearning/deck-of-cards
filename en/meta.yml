@@ -16,3 +16,4 @@ steps:
   - title: Create a class
   - title: Instantiate an object
   - title: Setters and getters
+  - title: "Challenge: add a getter and setter"
