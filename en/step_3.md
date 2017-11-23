@@ -50,22 +50,12 @@ The first argument in a method must always be `self` because the object itself i
 
 ### Attributes
 
-Attributes are the pieces of information stored within an object, just like a collection of variables associated with that object. The card object will begin with two attributes - `suit` and `number`, and we will prefix them with `self.` to show that they belong to the instance of the object.
+Attributes are pieces of information stored within an object, rather like a collection of variables associated with that object. The card object will begin with two attributes - `suit` and `number`, and we will prefix them with `self.` to show that they belong to the object instance.
 
-+ Add two attributes to your `__init__` method, and two parameters so that you can pass in their values:
++ Add two attributes to your `__init__` method, and two parameters so that you can pass in their values as arguments when you create the object:
 
 ```python
 def __init__(self, suit, number):
     self.suit = suit
     self.number = number
-```
-
-### Instantiate an object
-
-Now let's test out the class by creating an object which is an instance of the class.
-
-+ Create a `Card` object called `my_card` which will be the 6 of hearts:
-
-```python
-my_card = Card("hearts", "6")
 ```
