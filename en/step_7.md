@@ -55,7 +55,7 @@ numbers = [str(n) for n in range(2,11)]
 
 Broken down, this means:
 - Give me `str(n)` (the string version of n)
-- For every `n in range(2, 11)` - remember that the `range()` function will start at 2 and stop (but not include) 11.
+- For every `n in range(2, 11)` - remember that the `range()` function will start at 2 and stop at (but not include) 11.
 
 Then, add on the JQK cards at the end:
 
@@ -65,7 +65,7 @@ numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K"]
 
 --- /collapse ---
 
-+ Now we just have to mash the lists together and for each suit, for each number, create a `Card` object. One way of doing this is by using nested loops:
++ Now we just have to mash the lists together - for each suit, for each number, create a `Card` object. One way of doing this is by using nested loops:
 
 ```Python
 cards = []                          # Create an empty list of cards
@@ -89,9 +89,9 @@ self._cards = [ Card(s, n) for s in suits for n in numbers ]
 
 This code means:
 - Set `self._cards` to...
-- `[` a list...
+- `[` a list... `]`
 - of `Card` objects...
-- with every combination `for s in suits for n in numbers`
+- with every combination of `s, n` looping through `for s in suits` and `for n in numbers`
 
 --- /collapse ---
 
