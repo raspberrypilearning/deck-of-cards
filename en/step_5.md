@@ -98,7 +98,9 @@ card.suit = "clubs"
 print(card.suit)
 ```
 
-- If you need to change the implementation of the `_suit` attribute within the class, you can do that without breaking the code. The original `suit` property we wrote simply returned the suit, but let's say you wanted to return it in capitals, you could just change the code inside the property:
+- If you need to change the implementation of your class, if you have used properties you can do that without breaking any code which uses the class.
+
+The original `suit` property we wrote simply returned the suit, but let's say you wanted to return it in capitals, you could just change the code inside the property:
 
 ```python
 @property
@@ -106,6 +108,6 @@ def suit(self):
     return self._suit.upper()
 ```
 
-Any code which uses the `suit` property would still work. However, if you had just let people access the `suit` property directly, you would not be able to later change the implementation.
+Any code which uses the `suit` property would still work and this change would be applied everywhere. However, if you had just let people access the `suit` property directly, you would not be able to later change its implementation.
 
 --- /collapse ---
