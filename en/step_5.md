@@ -29,9 +29,9 @@ def __init__(self, suit, number):
 ```
 --- collapse ---
 ---
-title: Does this make my attribute private?
+title: Does the underscore mean the attribute cannot be changed directly?
 ---
-This **will not prevent** people from accessing the attribute, but it is a convention which indicates that they should not. If you want to test this, try adding an underscore to your code which changes the attribute:
+No. This **will not prevent** people from accessing the attribute, but it is a convention which indicates that they _should not_. If you want to test this, try adding an underscore to your code which changes the attribute:
 
 ```python
 my_card._suit = "dinosaurs"
@@ -77,3 +77,35 @@ def suit(self, suit):
 This means that when someone types `my_card.suit = "spades"` (i.e. tries to **set** the `suit` property) then this function will be called, with the value of "spades" sent in to the function as the `suit` parameter.
 
 + Run the program - you should see `"That's not a suit!"` appear if you try to change the card's suit to anything other than one of the suits in the list, and the suit will not change.
+
+--- collapse ---
+---
+title: What is the point of the @property decorator?
+---
+You might ask what is the point of using the `@property` and `@suit.setter` decorators - why don't we just write `get_suit()` and `set_suit()` methods?
+
+There are several reasons why:
+
+- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()`
+
+- You can use `card.suit` in two different contexts, but the syntax is identical:
+
+```Python
+# Set the suit of this card
+card.suit = "clubs"
+
+# Get the suit of this card
+print(card.suit)
+```
+
+- If you need to change the implementation of the `_suit` attribute within the class, you can do that without breaking the code. The original `suit` property we wrote simply returned the suit, but let's say you wanted to return it in capitals, you could just change the code inside the property:
+
+```python
+@property
+def suit(self):
+    return self._suit.upper()
+```
+
+Any code which uses the `suit` property would still work. However, if you had just let people access the `suit` property directly, you would not be able to later change the implementation.
+
+--- /collapse ---
