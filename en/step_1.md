@@ -6,7 +6,9 @@ Create a reusable object-oriented model of a deck of cards
 
 You will learn how to use the object-oriented paradigm in Python to create a model of a deck of cards.
 
-[Youtube video?]
+![Cards](images/cards.jpg)
+
+_By Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
 
 ### What you will learn
 
