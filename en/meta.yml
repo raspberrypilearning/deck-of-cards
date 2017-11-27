@@ -17,3 +17,4 @@ steps:
   - title: Instantiate an object
   - title: Setters and getters
   - title: "Challenge: add a getter and setter"
+  - title: A deck of cards
