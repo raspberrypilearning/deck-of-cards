@@ -57,10 +57,10 @@ Broken down, this means:
 - Give me `str(n)` (the string version of n)
 - For every `n in range(2, 11)` - remember that the `range()` function will start at 2 and stop at (but not include) 11.
 
-Then, add on the JQK cards at the end:
+Then, add on the JQKA cards at the end:
 
 ```Python
-numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K"]
+numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
 ```
 
 --- /collapse ---
