@@ -82,6 +82,12 @@ This means that when someone types `my_card.suit = "spades"` (i.e. tries to **se
 
 + Run the program - you should see `"That's not a suit!"` appear if you try to change the card's suit to anything other than one of the suits in the list, and the suit will not change.
 
+Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will work!
+
+```Python
+another_card = Card("Dinosaurs", "2")
+```
+
 --- collapse ---
 ---
 title: What is the point of the @property decorator?
