@@ -1,12 +1,5 @@
 ## Create a class
 
-You can choose whether to watch the video for each step of this resource, or use the written instructions.
-
-<video width="560" height="315" controls>
-<source src="resources/clip1.mp4" type="video/mp4">
-Your browser does not support the video tag, try FireFox or Chrome
-</video>
-
 A **class** is like a template for creating **objects**. You are going to begin by making a `Card` class which will act as a template for creating playing card objects.
 
 Each card object is a separate **instance** of the `Card` class. You might have a card object representing the 5 of Spades and a card object representing the 2 of Hearts.
@@ -16,6 +9,13 @@ Our playing cards will be represented as text rather than a picture like the car
 ![Five of spades](images/five-of-spades.png)
 
 ### Create a class
+
+You can choose whether to watch the video or use the written instructions.
+
+<video width="560" height="315" controls>
+<source src="resources/clip1.mp4" type="video/mp4">
+Your browser does not support the video tag, try FireFox or Chrome
+</video>
 
 + Open a new Python file and save it as `card.py`
 
