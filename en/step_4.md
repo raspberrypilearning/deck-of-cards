@@ -13,6 +13,8 @@ Let's test out the `Card` class by creating a card object. This object is an **i
 my_card = Card("hearts", "6")
 ```
 
+You may be wondering why the card number is `"6"` (a string) and not `6` (an integer). This is deliberate because some of the card "numbers" will be `"J"`, `"Q"`, `"K"` and `"A"`!
+
 + Add a print statement to display the card object
 
 ```python
