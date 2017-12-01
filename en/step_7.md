@@ -81,7 +81,7 @@ self._cards = cards                 # Then point self._cards at this list
 title: Could I have generated the deck using a list comprehension?
 ---
 
-Yes! You could replace all of the nested loop code with a single line of code:
+Yes! You could replace all of the code above with a single line of code:
 
 ```Python
 self._cards = [ Card(s, n) for s in suits for n in numbers ]
