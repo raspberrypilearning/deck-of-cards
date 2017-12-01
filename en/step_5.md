@@ -82,7 +82,7 @@ This means that when someone types `my_card.suit = "spades"` (i.e. tries to **se
 
 + Run the program - you should see `"That's not a suit!"` appear if you try to change the card's suit to anything other than one of the suits in the list, and the suit will not change.
 
-Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will work!
+Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will still work!
 
 ```Python
 another_card = Card("Dinosaurs", "2")
