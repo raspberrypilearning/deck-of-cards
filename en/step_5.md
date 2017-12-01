@@ -41,6 +41,8 @@ my_card._suit = "dinosaurs"
 
 --- /collapse ---
 
+### Getter
+
 + Go back to your `Card` class definition and add a new method called `suit` which returns the value of the `_suit` attribute.
 
 ```python
@@ -57,6 +59,8 @@ def suit(self):
 ```
 
 This means that wherever someone uses the value `my_card.suit` in their program, this function will be called, in this case they will receive the value of `self._suit`. Decorators are language-specific to Python.
+
+### Setter
 
 + Add another new method, and it is important that this method **is also called `suit`**. This method should take a piece of data passed in to represent the new suit they would like to set, and I am going to do a basic check to make sure that this data is one of the usual suits available in a deck of cards.
 
