@@ -1,7 +1,7 @@
 title: Deck of cards
 hero_image: images/banner.png
 description: Create a reusable object oriented model of a deck of cards
-theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: orange # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
 duration: 2 # possible values: 1, 2 or 3
 listed: false
 ingredient: false
