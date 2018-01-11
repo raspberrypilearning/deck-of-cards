@@ -10,7 +10,7 @@ You will learn how to use the object-oriented paradigm in Python to create a mod
 
 Object Oriented Programming (OOP) is a way of organising your code, so it is easier to understand, reuse and change.
 
-OOP allows you to combine data (variables) an funcionality together and wrap them together inside **objects**.
+OOP allows you to combine data (variables) and functionality together and wrap them together inside **objects**.
 
 _By Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
 

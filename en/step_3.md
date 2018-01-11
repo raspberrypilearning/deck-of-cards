@@ -74,6 +74,7 @@ class Welcome():
 
     def bye(self):
         print("Bye " + self.name)
+```
 
 --- /collapse ---
 
