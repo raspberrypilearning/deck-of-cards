@@ -30,7 +30,7 @@ class Deck:
 + Now let's write a method to populate the deck with the 52 cards it should contain. Begin by creating a method called `populate`:
 
 ```Python
-def populate(self):`
+def populate(self):
 ```
 
 + Inside your function, define two lists. One should contain all of the possible suits and the other contains all of the possible numbers that cards could have, as strings:
@@ -99,7 +99,7 @@ If you would like to know more about list comprehensions, have a look at the inf
 
 [[[generic-python-simple-list-comprehensions]]]
 
-+ Let's test whether your function properly constructs a deck. Go back to your `__init__` method and call the `populate()` function, then print out the list of cards to check it:
++ Let's test whether your function properly constructs a deck. Go back to your `__init__` method and call the `populate()` function, then print out the list of cards:
 
 ```Python
 def __init__(self):
@@ -107,6 +107,34 @@ def __init__(self):
     self.populate()
     print(self._cards)
 ```
+
++ Create an **instance** of the `Deck` class to check it:
+
+--- hints ---
+
+--- hint ---
+
+You create an instance of a class by declaring a variable and making it equal the `Class()`.
+
+--- /hint ---
+
+--- hint ---
+
+Review how you instantiated an object of the `Card` class.
+
+--- /hint ---
+
+--- hint ---
+
+Use this code:
+
+```Python
+my_deck = Deck()
+```
+
+--- /hint ---
+
+--- /hints ---
 
 You should see the following output:
 

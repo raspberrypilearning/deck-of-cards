@@ -66,10 +66,10 @@ This means that wherever someone uses the value `my_card.suit` in their program,
 
 ```python
 def suit(self, suit):
-       if suit in ["hearts", "clubs", "diamonds", "spades"]:
-           self._suit = suit
-       else:
-           print("That's not a suit!")
+    if suit in ["hearts", "clubs", "diamonds", "spades"]:
+        self._suit = suit
+    else:
+        print("That's not a suit!")
 ```
 + Now add a decorator to this method to say that it is the **setter** for the property **suit**.
 

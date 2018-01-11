@@ -44,7 +44,36 @@ title: Why do I need the self parameter?
 ---
 You might be wondering why you need to put `self` as the first parameter. A method is just a function, but it needs context in order to work.
 
-The first argument in a method must always be `self` because the object itself is always automatically passed in as the first argument, followed by any other arguments.
+The first argument in any `Class` method must always be `self` because the object itself is always automatically passed in as the first argument, followed by any other arguments.
+
+`self` is the reference to **object** which was initialised from the **class** and this is how data and functions is shared across the **object**.
+
+Example:
+
+Outside of OOP, for 2 functions to share a variable, it must be made global e.g.
+
+```python
+name = "Laura"
+
+def hi():
+    print("Hi " + name)
+
+def bye():
+    print("Bye " + name)
+```
+
+Within a **class**, `self` can be used to share variables:
+
+```python
+class Welcome():
+    def __init__(self):
+        self.name = "Laura"
+
+    def hi(self):
+        print("Hi " + self.name)
+
+    def bye(self):
+        print("Bye " + self.name)
 
 --- /collapse ---
 
