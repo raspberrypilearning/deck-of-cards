@@ -80,11 +80,11 @@ def suit(self, suit):
 def suit(self, suit):
 ```
 
-This means that when someone types `my_card.suit = "spades"` (i.e. tries to **set** the `suit` property) then this function will be called, with the value of "spades" sent in to the function as the `suit` parameter.
+This means that when someone types `my_card.suit = "spades"` (i.e. tries to **set** the `suit` property), this function will be called, with the value of `"spades"` sent to the function as the `suit` parameter.
 
 + Run the program. If you try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
 
-Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will still work!
+Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will still work:
 
 ```Python
 another_card = Card("Dinosaurs", "2")
@@ -92,9 +92,9 @@ another_card = Card("Dinosaurs", "2")
 
 --- collapse ---
 ---
-title: What is the point of the @property decorator?
+title: What is the point of the decorators?
 ---
-You might ask what is the point of using the `@property` and `@suit.setter` decorators - why don't we just write `get_suit()` and `set_suit()` methods?
+Why would we want to use the `@property` and `@suit.setter` decorators instead of just writing `get_suit()` and `set_suit()` methods?
 
 There are several reasons why:
 
