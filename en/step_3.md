@@ -29,7 +29,7 @@ Class names are usually written with a capital letter so that they are easily di
 
 ### Create an `__init__` method
 
-In Python, every object has a special **method** called `__init__` which tells it how to create (or **initialise**) itself. Methods are very similar to functions, and we use them to interact with the object. This method name has a double underscore either side of the word `init`.
+In Python, every object has a special **method** called `__init__` that tells it how to create (or **initialise**) itself. Methods are very similar to functions, and we use them to interact with objects. This particular method name always has a double underscore on either side of `init`.
 
 + Create an `__init__` method for your object:
 
@@ -42,15 +42,13 @@ class Card:
 ---
 title: Why do I need the `self` parameter?
 ---
-You might be wondering why you need to put `self` as the first parameter. A method is just a function, but it needs context in order to work.
+A method is just a function, but it needs context in order to work. The first argument in any `Class` method must always be `self`, because the object itself is always automatically passed in as the first argument, followed by any other arguments.
 
-The first argument in any `Class` method must always be `self`, because the object itself is always automatically passed in as the first argument, followed by any other arguments.
-
-`self` is the reference to the **object** which was initialised from the **class**, and this is how data and functions are shared across the **object**.
+`self` is the reference to the **object** which is initialised from the **class**, and this is how data and functions are shared across the **object**.
 
 Let's look at an example:
 
-Outside of OOP, for two functions to share a variable, it must be made global:
+Outside of OOP, for two functions to share the same variable, it must be made global:
 
 ```python
 name = "Laura"
@@ -80,7 +78,7 @@ class Welcome():
 
 ### Attributes
 
-Attributes are pieces of information stored within an object, rather like a collection of variables associated with that object. The card object will begin with two attributes - `suit` and `number`, and we will prefix them with `self.` to show that they belong to the object instance.
+Attributes are pieces of information stored within an object, rather like a collection of variables associated with that object. The card object will begin with two attributes, `suit` and `number`, and we will prefix them with `self.` to show that they belong to the object instance.
 
 + Add two attributes to your `__init__` method, and two parameters so that you can pass in their values as arguments when you create the object:
 
