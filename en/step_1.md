@@ -1,18 +1,18 @@
 ## Introduction
 
-Create a reusable object-oriented model of a deck of cards
+Create a reusable object-oriented model of a deck of cards.
 
 ### What you will make
 
-You will learn how to use the object-oriented paradigm in Python to create a model of a deck of cards.
+You will learn how to use the object-oriented programming paradigm in Python to create a model of a deck of cards.
 
 ![Cards](images/cards.jpg)
 
-Object Oriented Programming (OOP) is a way of organising your code, so it is easier to understand, reuse and change.
+Object-oriented programming (OOP) is a way of organising your code so it is easier to understand, reuse, and change.
 
-OOP allows you to combine data (variables) and functionality together and wrap them together inside **objects**.
+OOP allows you to combine data (variables) and functionality and wrap them together inside **objects**.
 
-_By Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
+_Image by Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
 
 ### What you will learn
 
