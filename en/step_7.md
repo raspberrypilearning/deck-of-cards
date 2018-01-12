@@ -65,7 +65,7 @@ numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
 
 --- /collapse ---
 
-+ Now to generate the deck, we just have to combine items from the lists - for each suit, for each number, create a `Card` object. One way of doing this is by using nested loops:
++ Now to generate the deck, we just have to combine items from the lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
 
 ```Python
 cards = []                          # Create an empty list of cards
