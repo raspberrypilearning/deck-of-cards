@@ -57,7 +57,7 @@ This means:
 - Give me `str(n)` (the string version of n)
 - For every `n in range(2, 11)` (remember that the `range()` function will start at 2 and stop at (but not include) 11)
 
-Then, add on the JQKA cards at the end:
+Then add a list containing the picture cards and the ace at the end:
 
 ```Python
 numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
@@ -65,7 +65,7 @@ numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
 
 --- /collapse ---
 
-+ Now to generate the deck, we just have to combine items from the lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
++ So that `populate` generates the deck of cards, we just have to combine items from the lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
 
 ```Python
 cards = []                          # Create an empty list of cards
@@ -78,7 +78,7 @@ self._cards = cards                 # Then point self._cards at this list
 
 --- collapse ---
 ---
-title: Could I have generated the deck using a list comprehension?
+title: Could I generate the deck using a list comprehension?
 ---
 
 Yes! You could replace all of the code above with a single line of code:
@@ -89,9 +89,9 @@ self._cards = [ Card(s, n) for s in suits for n in numbers ]
 
 This code means:
 - Set `self._cards` to
-- `[` a list `]`
+- `[ a list ]`
 - of `Card` objects
-- with every combination of `s, n`, looping through `for s in suits` and `for n in numbers`
+- containing every combination of `s, n`, looping through `for s in suits` and `for n in numbers`
 
 --- /collapse ---
 
@@ -99,7 +99,7 @@ If you would like to know more about list comprehensions, have a look at the inf
 
 [[[generic-python-simple-list-comprehensions]]]
 
-+ Let's test whether your function properly constructs a deck. Go back to your `__init__` method and call the `populate()` function, then print out the list of cards:
++ Let's test whether your method properly constructs a deck. Go back to your `__init__` method, call the `populate()` method, then print out the list of cards:
 
 ```Python
 def __init__(self):
@@ -108,7 +108,7 @@ def __init__(self):
     print(self._cards)
 ```
 
-+ Create an **instance** of the `Deck` class to check it:
++ Create an **instance** of the `Deck` class to check whether you are getting the deck you want.
 
 --- hints ---
 
