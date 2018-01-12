@@ -2,7 +2,7 @@
 
 Now that you have a basic model of a card, it's time to create a deck.
 
-+ Create a `Deck` class. This can either be done in the same file as your `Card` class, or if you prefer, you can do it in a separate file. If you do it in a different file (e.g. `deck.py`), you will need to import the class at the top of your `card.py` file with this code:
++ Create a `Deck` class. You can either do this in the same file your `Card` class is in, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the class at the top of your `card.py` file with this code:
 
 ```python
 from deck import Deck
