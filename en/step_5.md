@@ -1,11 +1,13 @@
 ## Setters and getters
 
+For this section, you can either watch the video below, or read the instructions.
+
 <video width="560" height="315" controls>
 <source src="resources/clip3.mp4" type="video/mp4">
 Your browser does not support the video tag, try FireFox or Chrome
 </video>
 
-It is possible to access the attributes of an object directly. For example you could add this code at the end of your program to change the suit of the card and then display it:
+It is possible to access the attributes of an object directly. For example, you could add this code at the end of your program to change the suit of the card, and then display it:
 
 ```python
 my_card.suit = "clubs"
@@ -19,7 +21,7 @@ my_card.suit = "dinosaurs"
 print(my_card)
 ```
 
-Instead, let's create a **setter** and a **getter** for the suit.
+Instead, let's create a **setter** method and a **getter** method for the suit.
 
 + Go back to your `__init__` method and locate `self.suit`. Add an underscore before `suit` to indicate that you do not want people to access this attribute directly.
 
@@ -31,19 +33,19 @@ def __init__(self, suit, number):
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
 ---
-No. This **will not prevent** people from accessing the attribute, but it is a convention which indicates that they _should not_. If you want to test this, try adding an underscore to your code which changes the attribute:
+No. This **will not prevent** people from accessing the attribute, but it is a convention which indicates that they **should not**. If you want to test this, try adding an underscore to your code for changing the attribute:
 
 ```python
 my_card._suit = "dinosaurs"
 ```
 
-...and you will see that you can still change the attribute just as before.
+You will see that you can still change the attribute just as before.
 
 --- /collapse ---
 
 ### Getter
 
-+ Go back to your `Card` class definition and add a new method called `suit` which returns the value of the `_suit` attribute.
++ Go back to your `Card` class definition and add a new method called `suit`, which returns the value of the `_suit` attribute.
 
 ```python
 def suit(self):
@@ -58,11 +60,11 @@ def suit(self):
     return self._suit
 ```
 
-This means that wherever someone uses the value `my_card.suit` in their program, this function will be called, in this case they will receive the value of `self._suit`. Decorators are language-specific to Python.
+This means that wherever someone uses the value `my_card.suit` in their program, this function will be called. In this case, they will receive the value of `self._suit`. Decorators are language-specific to Python.
 
 ### Setter
 
-+ Add another new method, and it is important that this method **is also called `suit`**. This method should take a piece of data passed in to represent the new suit they would like to set, and I am going to do a basic check to make sure that this data is one of the usual suits available in a deck of cards.
++ Add another new method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
 
 ```python
 def suit(self, suit):
@@ -80,7 +82,7 @@ def suit(self, suit):
 
 This means that when someone types `my_card.suit = "spades"` (i.e. tries to **set** the `suit` property) then this function will be called, with the value of "spades" sent in to the function as the `suit` parameter.
 
-+ Run the program - you should see `"That's not a suit!"` appear if you try to change the card's suit to anything other than one of the suits in the list, and the suit will not change.
++ Run the program. If you try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
 
 Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will still work!
 
@@ -96,9 +98,9 @@ You might ask what is the point of using the `@property` and `@suit.setter` deco
 
 There are several reasons why:
 
-- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()`
+- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()`.
 
-- You can use `card.suit` in two different contexts, but the syntax is identical:
+- You can use `card.suit` in two different contexts, but with identical syntax:
 
 ```Python
 # Set the suit of this card
@@ -108,9 +110,9 @@ card.suit = "clubs"
 print(card.suit)
 ```
 
-- If you need to change the implementation of your class, if you have used properties you can do that without breaking any code which uses the class.
+- Most importantly, if you have used properties and you need to change the implementation of your class, you can do so without breaking any code which uses the class.
 
-The original `suit` property we wrote simply returned the suit, but let's say you wanted to return it in capitals, you could just change the code inside the property:
+For example, the original `suit` property you wrote simply returned the suit, but let's say you want to return it in capitals. You can just change the code inside the property:
 
 ```python
 @property
@@ -118,6 +120,6 @@ def suit(self):
     return self._suit.upper()
 ```
 
-Any code which uses the `suit` property would still work and this change would be applied everywhere. However, if you had just let people access the `suit` property directly, you would not be able to later change its implementation.
+Any code which uses the `suit` property will still work, and this change will be applied everywhere. However, if you had just let people access the `suit` property directly, you would not be able to change its implementation later.
 
 --- /collapse ---
