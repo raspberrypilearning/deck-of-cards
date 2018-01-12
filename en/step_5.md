@@ -7,7 +7,7 @@ For this section, you can either watch the video below, or read the instructions
 Your browser does not support the video tag, try FireFox or Chrome
 </video>
 
-It is possible to access the attributes of an object directly. For example, you could add this code at the end of your program to change the suit of the card, and then display it:
+It is possible to access the attributes of an object directly. For example, you could add the following code at the bottom of your program to change the suit of the card, and then display it:
 
 ```python
 my_card.suit = "clubs"
