@@ -33,7 +33,7 @@ def __init__(self, suit, number):
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
 ---
-No. This **will not prevent** people from accessing the attribute, but it is a convention which indicates that they **should not**. If you want to test this, try adding an underscore to your code for changing the attribute:
+No. This **will not prevent** people from changing the attribute directly, but it is a convention which indicates that they **should not**. If you want to test this, try adding an underscore to your code for changing the attribute:
 
 ```python
 my_card._suit = "dinosaurs"
