@@ -18,7 +18,7 @@ class Deck:
     def __init__(self):
 ```
 
-+ The `Deck` will need to store a list of cards, each of which will be a card object. Add an attribute called `_cards`, which will be an empty list for now.
++ The `Deck` will need to store a list of cards, each of which will be a `Card` object. Add an attribute called `_cards`, which will be an empty list for now.
 
 ```python
 class Deck:
