@@ -1,6 +1,6 @@
 ## Instantiate an object
 
-<video width="560" height="315" controls>
+<video width="768" height="576" controls>
 <source src="resources/clip2.mp4" type="video/mp4">
 Your browser does not support the video tag, so try FireFox or Chrome.
 </video>

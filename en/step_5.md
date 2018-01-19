@@ -6,7 +6,7 @@ To change the attributes within an object you class will need some **properties*
 
 For this section, you can either watch the video below, or read the instructions.
 
-<video width="560" height="315" controls>
+<video width="768" height="576" controls>
 <source src="resources/clip3.mp4" type="video/mp4">
 Your browser does not support the video tag, try FireFox or Chrome
 </video>

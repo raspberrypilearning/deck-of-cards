@@ -25,7 +25,7 @@ Our playing cards will be represented as text rather than pictures like the one 
 
 You can choose whether to watch the video or to use the written instructions.
 
-<video width="560" height="315" controls>
+<video width="768" height="576" controls>
 <source src="resources/clip1.mp4" type="video/mp4">
 Your browser does not support the video tag, so try FireFox or Chrome.
 </video>
