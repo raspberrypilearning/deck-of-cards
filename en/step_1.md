@@ -42,7 +42,7 @@ red = LED(17)
 red.on()
 ```
 
-To interact with the LED, we have created an LED object which represents the physical LED in code. It has the name ‘red’ so that we can refer to that specific LED object.
+To interact with the LED, we have created an `LED` object which represents the physical LED in code. It has the name `red` so that we can refer to that specific LED object.
 
 ```python
 red = LED(17)
@@ -56,9 +56,9 @@ green = LED(21)
 
 #### Why would I want to use objects?
 
-In our example, we created an LED object to model a physical LED in code. We also included a command to control the LED, in this case to turn it on. Such commands are called methods, i.e. custom functions specifically designed to interact with an object.
+In our example, we created an `LED` object to model a physical LED in code. We also included a command to control the LED, in this case to turn it on. Such commands are called methods, i.e. custom functions specifically designed to interact with an object.
 
-One of the benefits of using object-oriented programming is that unnecessary details can be abstracted away in the implementation of the methods. We do not need to know the specifics of exactly how a method works to be able to use it, we simply need to know that when we call the method, we will achieve a desired outcome. In our example, we don’t need to know anything about the on() method apart from the fact that using it on our LED object will make the physical LED light up.
+One of the benefits of using object-oriented programming is that unnecessary details can be abstracted away in the implementation of the methods. We do not need to know the specifics of exactly how a method works to be able to use it, we simply need to know that when we call the method, we will achieve a desired outcome. In our example, we don’t need to know anything about the `on()` method apart from the fact that using it on our `LED` object will make the physical LED light up.
 
 --- /collapse ---
 
