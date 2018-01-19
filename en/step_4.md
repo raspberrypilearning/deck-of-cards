@@ -25,10 +25,6 @@ print(my_card)
 
 You will see the text representation of your object — it is a `Card`, and you are shown the address of the object in memory:
 
-```
-<__main__.Card object at 0x0000025EF72E5780>
-```
-
 ![<__main__.Card object at 0x000002A437045978>](images/repr1.png)
 
 This description is created by a special method called `__repr__` which returns a text **representation** of the object.
