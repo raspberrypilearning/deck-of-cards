@@ -1,4 +1,8 @@
-## Setters and getters
+## Attributes and Properties
+
+To change the attributes within an object you class will need some **properties**, these are the special functions which either **get** or **set** the value of an attribute and are referred to as the **getter** and the **setter**.
+
+### Getters and setters
 
 For this section, you can either watch the video below, or read the instructions.
 
@@ -21,7 +25,7 @@ my_card.suit = "dinosaurs"
 print(my_card)
 ```
 
-Instead, let's create a **setter** method and a **getter** method for the suit.
+Instead, let's create a **getter** method and a **setter** method for the suit.
 
 + Go back to your `__init__` method and locate `self.suit`. Add an underscore before `suit` to indicate that you do not want people to access this attribute directly.
 
@@ -29,6 +33,7 @@ Instead, let's create a **setter** method and a **getter** method for the suit.
 def __init__(self, suit, number):
     self._suit = suit
 ```
+
 --- collapse ---
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
@@ -60,7 +65,21 @@ def suit(self):
     return self._suit
 ```
 
-This means that wherever someone uses the value `my_card.suit` in their program, this function will be called. In this case, they will receive the value of `self._suit`. Decorators are language-specific to Python.
+This means that wherever someone uses the value `my_card.suit` in their program, this function will be called. In this case, they will receive the value of `self._suit`. 
+
+--- collapse ---
+
+---
+title: What is the property decorator?
+---
+
+In object orientated programming **decorators** allow additional behaviour (or functionality) to be added to **class**.
+
+**Decorators** can be thought of as wrappers to functions, it contains the function but it also extends it, adding additional behaviour to it.
+
+The **property** decorator in Python wraps the **getter** function and adds additional functionality to it so it can be used as a property an **object**.
+
+--- /collapse ---
 
 ### Setter
 

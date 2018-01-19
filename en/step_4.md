@@ -21,11 +21,25 @@ You may be wondering why the card number is `"6"` (a string) and not `6` (an int
 print(my_card)
 ```
 
-+ Run the program. You will see the text representation of your object — it is a `Card`, and you are shown the address of the object in memory.
+TODO - more about what __repr__ is...  Why its useful, What overiding is...
+
+TODO - why do you see what you see when the __repr__ is printed
+
+TODO - insert an image to show whats going on.
+
++ Run the program. 
+
+You will see the text representation of your object — it is a `Card`, and you are shown the address of the object in memory:
+
+```
+<__main__.Card object at 0x0000025EF72E5780>
+```
+
+This description is created by a special method called `__repr__` which returns a text **representation** of the object.
 
 You can **override** the `__repr__` method to change how your object is represented as text.
 
-+ Go back to your class definition and add in some code to override the `__repr__` method so that it describes the card:
++ Go back to your `Card` class definition and add in some code to override the `__repr__` method so that it describes the card in a more meaningful way:
 
 ```python
 def __repr__(self):
@@ -34,4 +48,11 @@ def __repr__(self):
 
 For example, if `self.number` is `"5"` and `self.suit` is `"spades"`, this will print "5 of spades".
 
-+ Run the program again and check that your new way of representing the object as text works. You can also customise this representation to your own liking.
++ Run the program again and check that your new way of representing the object as text works e.g.
+
+```
+6 of hearts
+```
+
+You can also customise this representation to your own liking.
+
