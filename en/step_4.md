@@ -21,12 +21,6 @@ You may be wondering why the card number is `"6"` (a string) and not `6` (an int
 print(my_card)
 ```
 
-TODO - more about what __repr__ is...  Why its useful, What overiding is...
-
-TODO - why do you see what you see when the __repr__ is printed
-
-TODO - insert an image to show whats going on.
-
 + Run the program. 
 
 You will see the text representation of your object — it is a `Card`, and you are shown the address of the object in memory:
@@ -34,6 +28,8 @@ You will see the text representation of your object — it is a `Card`, and you 
 ```
 <__main__.Card object at 0x0000025EF72E5780>
 ```
+
+![<__main__.Card object at 0x000002A437045978>](images/repr1.png)
 
 This description is created by a special method called `__repr__` which returns a text **representation** of the object.
 
@@ -50,9 +46,7 @@ For example, if `self.number` is `"5"` and `self.suit` is `"spades"`, this will 
 
 + Run the program again and check that your new way of representing the object as text works e.g.
 
-```
-6 of hearts
-```
+![6 of hearts](images/repr2.png)
 
 You can also customise this representation to your own liking.
 

@@ -15,7 +15,7 @@ steps:
   - title: What you will need
   - title: Create a class
   - title: Instantiate an object
-  - title: Setters and getters
+  - title: Attributes and properties
   - title: "Challenge: add a getter and setter"
   - title: A deck of cards
   - title: "Challenge: what else?"

@@ -8,6 +8,8 @@ You will learn how to use the object-oriented programming paradigm in Python to 
 
 ![Cards](images/cards.jpg)
 
+_Image by Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
+
 Object-oriented programming (OOP) is a way of organising your code so it is easier to understand, reuse, and change.
 
 OOP allows you to combine data (variables) and functionality and wrap them together inside **objects**.
@@ -48,7 +50,9 @@ red = LED(17)
 
 If we wired up another LED to pin 21, we could create another object with a different name to represent it:
 
+```python
 green = LED(21)
+```
 
 #### Why would I want to use objects?
 
@@ -57,8 +61,6 @@ In our example, we created an LED object to model a physical LED in code. We als
 One of the benefits of using object-oriented programming is that unnecessary details can be abstracted away in the implementation of the methods. We do not need to know the specifics of exactly how a method works to be able to use it, we simply need to know that when we call the method, we will achieve a desired outcome. In our example, we don’t need to know anything about the on() method apart from the fact that using it on our LED object will make the physical LED light up.
 
 --- /collapse ---
-
-_Image by Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
 
 ### What you will learn
 

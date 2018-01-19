@@ -1,4 +1,4 @@
-## Attributes and Properties
+## Attributes and properties
 
 To change the attributes within an object you class will need some **properties**, these are the special functions which either **get** or **set** the value of an attribute and are referred to as the **getter** and the **setter**.
 
@@ -111,9 +111,9 @@ another_card = Card("Dinosaurs", "2")
 
 --- collapse ---
 ---
-title: What is the point of the decorators?
+title: What is the point of properties?
 ---
-Why would we want to use the `@property` and `@suit.setter` decorators instead of just writing `get_suit()` and `set_suit()` methods?
+Why would we want to use the `@property` and `@suit.setter` decorators to create properties instead of just writing `get_suit()` and `set_suit()` methods?
 
 There are several reasons why:
 

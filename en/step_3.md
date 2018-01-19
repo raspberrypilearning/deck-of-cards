@@ -2,12 +2,18 @@
 
 A **class** is like a template for creating **objects**.  
 
-Think of a class as being similar to a cookie cutter – it is a template for all the cookie objects you make. You can make as many instances of cookie objects as you want, and they will all start off from the same template. If you like, you can customise each instance of a cookie object, perhaps by adding some icing or some sprinkles. But whenever you make cookies, you use the same cookie-cutter template.
+Think of a class as being similar to a cookie cutter – it is a template for all the cookie objects you make. 
 
-<video width="1024" height="768" controls>
+<video width="768" height="576" controls>
 <source src="resources/Cementyourknowledgeofobjects.mp4" type="video/mp4">
 Your browser does not support the video tag, so try FireFox or Chrome.
 </video>
+
+You can make as many instances of cookie objects as you want, and they will all start off from the same template. 
+
+If you like, you can customise each instance of a cookie object, perhaps by adding some icing or some sprinkles. But whenever you make cookies, you use the same cookie-cutter template.
+
+### Create a class
 
 You are going to begin by making a `Card` class that will act as a template for creating playing card objects.
 
@@ -16,8 +22,6 @@ Each card object is a separate **instance** of the `Card` class. For example, yo
 Our playing cards will be represented as text rather than pictures like the one below.
 
 ![Five of spades](images/five-of-spades.png)
-
-### Create a class
 
 You can choose whether to watch the video or to use the written instructions.
 

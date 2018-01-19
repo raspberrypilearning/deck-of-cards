@@ -1,6 +1,6 @@
 ## Challenge: add a getter and setter
 
-Now it's your turn. Follow the same principles as in the previous step to add a getter and a setter method for the attribute `number`.
+Now it's your turn. Follow the same principles as in the previous step to add a **getter** and a **setter** method for the attribute `number`.
 
 Don't forget:
 
