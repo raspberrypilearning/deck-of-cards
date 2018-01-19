@@ -5,7 +5,7 @@ A **class** is like a template for creating **objects**.
 Think of a class as being similar to a cookie cutter – it is a template for all the cookie objects you make. 
 
 <video width="768" height="576" controls>
-<source src="resources/Cementyourknowledgeofobjects.mp4" type="video/mp4">
+<source src="resources/Cementyourknowledgeofobjects_sd.mp4" type="video/mp4">
 Your browser does not support the video tag, so try FireFox or Chrome.
 </video>
 
