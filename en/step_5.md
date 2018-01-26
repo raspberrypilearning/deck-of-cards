@@ -1,6 +1,6 @@
 ## Attributes and properties
 
-To change the attributes within an object you class will need some **properties**, these are the special functions which either **get** or **set** the value of an attribute and are referred to as the **getter** and the **setter**.
+So you can change the attributes within an object, your class will need some **properties**. These are the special methods that either **get** or **set** the value of an attribute, and are therefore referred to as the **getter** and the **setter**.
 
 ### Getters and setters
 
@@ -11,23 +11,23 @@ For this section, you can either watch the video below, or read the instructions
 Your browser does not support the video tag, try FireFox or Chrome
 </video>
 
-It is possible to access the attributes of an object directly. For example, you could add the following code at the bottom of your program to change the suit of the card, and then display it:
+It is possible to access the attributes of an object directly. For example, you could add the following code at the bottom of your program to change the `suit` attribute of `my_card` and then display the object:
 
 ```python
 my_card.suit = "clubs"
 print(my_card)
 ```
 
-However, accessing the attributes directly is not a good idea because it allows people to do things like this:
+However, accessing the attributes directly is not a good idea, because it allows people to do things like this:
 
 ```python
 my_card.suit = "dinosaurs"
 print(my_card)
 ```
 
-Instead, let's create a **getter** method and a **setter** method for the suit.
+Instead, let's create properties for your class: a **getter** method and a **setter** method for accessing the `suit` attribute.
 
-+ Go back to your `__init__` method and locate `self.suit`. Add an underscore before `suit` to indicate that you do not want people to access this attribute directly.
++ First, go back to your `__init__` method and locate `self.suit`. Add an underscore before `suit` to indicate that you do not want people to access this attribute directly.
 
 ```python
 def __init__(self, suit, number):
@@ -38,7 +38,7 @@ def __init__(self, suit, number):
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
 ---
-No. This **will not prevent** people from changing the attribute directly, but it is a convention which indicates that they **should not**. If you want to test this, try adding an underscore to your code for changing the attribute:
+No. This **will not prevent** people from changing the attribute directly, but it is a convention which indicates that they **should not**. If you want to test this, add an underscore to your code for changing the attribute to `"dinosaurs"`:
 
 ```python
 my_card._suit = "dinosaurs"
@@ -50,14 +50,14 @@ You will see that you can still change the attribute just as before.
 
 ### Getter
 
-+ Go back to your `Card` class definition and add a new method called `suit`, which returns the value of the `_suit` attribute.
++ Go back to your `Card` class definition, add a new method called `suit`, and have it return the value of the `_suit` attribute.
 
 ```python
 def suit(self):
     return self._suit
 ```
 
-+ Add a **decorator** to this method to say that it is a **property**.
++ Add a **decorator** to this method to say that it is a property.
 
 ```python
 @property
@@ -65,25 +65,25 @@ def suit(self):
     return self._suit
 ```
 
-This means that wherever someone uses the value `my_card.suit` in their program, this function will be called. In this case, they will receive the value of `self._suit`. 
+Now, wherever someone uses the value `my_card.suit` in their program, this getter method will be called, and the user will receive the value of `self._suit` stored within the `my_card` object. 
 
 --- collapse ---
 
 ---
-title: What is the property decorator?
+title: What's a decorator, and what does the `@property` decorator do?
 ---
 
-In object orientated programming **decorators** allow additional behaviour (or functionality) to be added to **class**.
+In object-oriented programming, decorators allow you to add additional behaviour (or functionality) to a class.
 
-**Decorators** can be thought of as wrappers to functions, it contains the function but it also extends it, adding additional behaviour to it.
+A decorator can be thought of as a wrapper to a method: it contains the method but it also extends its functionality.
 
-The **property** decorator in Python wraps the **getter** function and adds additional functionality to it so it can be used as a property an **object**.
+The `@property` decorator in Python needs to be added to the getter method so that the method 'becomes' a property.
 
 --- /collapse ---
 
 ### Setter
 
-+ Add another new method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
++ Add another method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
 
 ```python
 def suit(self, suit):
@@ -92,18 +92,18 @@ def suit(self, suit):
     else:
         print("That's not a suit!")
 ```
-+ Now add a decorator to this method to say that it is the **setter** for the property **suit**.
++ Now add a decorator to this method to say that it is the setter for the attribute `suit`.
 
 ```Python
 @suit.setter
 def suit(self, suit):
 ```
 
-This means that when someone types `my_card.suit = "spades"` (i.e. tries to **set** the `suit` property), this function will be called, with the value of `"spades"` sent to the function as the `suit` parameter.
+As with the getter method, this decorator defines the method as a property. Now whenever someone tries to set the `suit` attribute, e.g. by typing `my_card.suit = "spades"`, the `@suit.setter` property will be called, and in this example, the value of `"spades"` will be passed to it as the `suit` parameter.
 
-+ Run the program. If you try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
++ Run the program. If you now try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
 
-Note that we don't currently have any validation in the `__init__` method, so if you create the 2 of Dinosaurs like this, it will still work:
+Note that we don't currently have any validation in the `__init__` method, so if you can still create the 2 of Dinosaurs like this:
 
 ```Python
 another_card = Card("Dinosaurs", "2")
@@ -129,9 +129,7 @@ card.suit = "clubs"
 print(card.suit)
 ```
 
-- Most importantly, if you have used properties and you need to change the implementation of your class, you can do so without breaking any code which uses the class.
-
-For example, the original `suit` property you wrote simply returned the suit, but let's say you want to return it in capitals. You can just change the code inside the property:
+- Most importantly, if you have used properties and you need to change how the properties work, you can do so without breaking any code that uses the class. For example, the original `suit` property you wrote simply returned the suit, but let's say you want to return it in capitals. To do so, you can just change the code within the property:
 
 ```python
 @property
@@ -139,6 +137,6 @@ def suit(self):
     return self._suit.upper()
 ```
 
-Any code which uses the `suit` property will still work, and this change will be applied everywhere. However, if you had just let people access the `suit` property directly, you would not be able to change its implementation later.
+Any code which uses the `suit` property will still work. However, if you had just let people access the `suit` attribute directly, you would not be able to change its implementation later.
 
 --- /collapse ---
