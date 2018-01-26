@@ -2,7 +2,7 @@
 
 Now that you have a basic model of a card, it's time to create a deck.
 
-+ Create a `Deck` class. You can either do this in the same file your `Card` class is in, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the class at the top of your `card.py` file with this code:
++ Create a `Deck` class. You can either do this in the same file where you wrote your `Card` class, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the class at the top of your `card.py` file with this code:
 
 ```python
 from deck import Deck
@@ -18,7 +18,7 @@ class Deck:
     def __init__(self):
 ```
 
-+ The `Deck` will need to store a list of cards, each of which will be a `Card` object. Add an attribute called `_cards`, which will be an empty list for now.
++ The `Deck` will need to store a list of cards, each of which will be a `Card` object. Add an attribute called `_cards` to the `__init__` method, and define it as an empty list for now.
 
 ```python
 class Deck:
@@ -45,7 +45,7 @@ def populate(self):
 ---
 title: Is there a more efficient way to make the list of numbers?
 ---
-Yes! Instead of writing them all out, you could use a **list comprehension** to auto-generate the numbers 2 to 10. A list comprehension is a quick way of creating a new list based on an existing list.
+Yes! Instead of writing them all out, you could use a **list comprehension**, which is a quick way of creating a new list based on an existing list.
 
 So, to create a list containing the numbers 2 to 10 as strings, you could use the code:
 
@@ -65,7 +65,7 @@ numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
 
 --- /collapse ---
 
-+ So that `populate` generates the deck of cards, we just have to combine items from the lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
++ So that `populate` generates the deck of cards, we just have to combine items from the two lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
 
 ```Python
 cards = []                          # Create an empty list of cards
@@ -108,7 +108,7 @@ def __init__(self):
     print(self._cards)
 ```
 
-+ Create an **instance** of the `Deck` class to check whether you are getting the deck you want.
++ Create an instance of the `Deck` class to check whether you are getting the deck you want.
 
 --- hints ---
 
