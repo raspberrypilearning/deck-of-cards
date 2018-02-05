@@ -1,6 +1,8 @@
 ## Attributes and properties
 
-So you can change the attributes within an object, your class will need some **properties**. These are the special methods that either **get** or **set** the value of an attribute, and are therefore referred to as the **getter** and the **setter**.
+So you can change the attributes within an object, your class will need some **properties**. 
+
+**Properties** are the special methods that either **get** or **set** the value of an attribute, and are therefore referred to as the **getter** and the **setter**.
 
 ### Getters and setters
 

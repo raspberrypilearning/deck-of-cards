@@ -76,12 +76,7 @@ for suit in suits:                  # For each suit...
 self._cards = cards                 # Then point self._cards at this list
 ```
 
---- collapse ---
----
-title: Could I generate the deck using a list comprehension?
----
-
-Yes! You could replace all of the code above with a single line of code:
+However, using nested loops can make your code more complicated and it is possible to use *list comprehension* to simplify the code:
 
 ```Python
 self._cards = [ Card(s, n) for s in suits for n in numbers ]
@@ -92,8 +87,6 @@ This code means:
 - `[ a list ]`
 - of `Card` objects
 - containing every combination of `s, n`, looping through `for s in suits` and `for n in numbers`
-
---- /collapse ---
 
 If you would like to know more about list comprehensions, have a look at the information below.
 
