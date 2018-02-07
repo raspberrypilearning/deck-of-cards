@@ -40,7 +40,11 @@ def __init__(self, suit, number):
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
 ---
-No. This **will not prevent** people from changing the attribute directly, but it is a convention which indicates that they **should not**. If you want to test this, add an underscore to your code for changing the attribute to `"dinosaurs"`:
+No.
+
+Adding an underscore is good practice and style.
+
+However, this **will not prevent** people from changing the attribute directly, but it is a convention which indicates that they **should not** . If you want to test this, add an underscore to your code for changing the attribute to `"dinosaurs"`:
 
 ```python
 my_card._suit = "dinosaurs"
@@ -72,8 +76,10 @@ Now, wherever someone uses the value `my_card.suit` in their program, this gette
 --- collapse ---
 
 ---
-title: What's a decorator, and what does the `@property` decorator do?
+title: What's a decorator?
 ---
+
+### What's a decorator?
 
 In object-oriented programming, decorators allow you to add additional behaviour (or functionality) to a class.
 
@@ -82,6 +88,7 @@ A decorator can be thought of as a wrapper to a method: it contains the method b
 The `@property` decorator in Python needs to be added to the getter method so that the method 'becomes' a property.
 
 --- /collapse ---
+
 
 ### Setter
 
@@ -94,7 +101,7 @@ def suit(self, suit):
     else:
         print("That's not a suit!")
 ```
-+ Now add a decorator to this method to say that it is the setter for the attribute `suit`.
++ Now add a decorator to this method to say that it is the setter for `suit`.
 
 ```Python
 @suit.setter
@@ -103,6 +110,51 @@ def suit(self, suit):
 
 As with the getter method, this decorator defines the method as a property. Now whenever someone tries to set the `suit` attribute, e.g. by typing `my_card.suit = "spades"`, the `@suit.setter` property will be called, and in this example, the value of `"spades"` will be passed to it as the `suit` parameter.
 
+Note - by using getter and setter properties and decorators you can have 2 functions with the same name, one which is called when you get the value and one when you set the value.
+
+--- collapse ---
+
+---
+title: Why do we use properties?
+---
+
+### Why do we use properties?
+
+Why would we want to use the `@property` and `.setter` decorators to create properties instead of just creating a `get_suit()` and `set_suit()` method?
+
+There are several reasons why:
+
+- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()` and `card.set_suit()`.
+
+```python
+my_suit = card.suit
+card.suit = "spades"
+```
+
+rather than:
+
+```python
+my_suit = card.get_suit()
+card.set_suit("spades")
+```
+
+- You can make complex functions look like simple operations, think back to the led example on step 1, you dont have to know how to turn on and led, on() does it all for you. 
+
+- If you have used properties rather than setting attributes and you need to change how the Class work, you can do so without breaking any code that uses the class. For example, the original `suit` setter you wrote simply stored the suit, but let's say you want to store it in capitals. To do so, you can just change the code within the property and all suits would be stored as capitals:
+
+```python
+@suit.setter
+def suit(self, suit):
+        if suit in ["hearts", "clubs", "diamonds", "spades"]:
+            self._suit = suit.upper()
+        else:
+            print("That's not a suit!")
+```
+
+Any code which uses the `suit` property will still work. However, if you had just let people access the `suit` attribute directly, you would not be able to change its implementation later.
+
+--- /collapse ---
+
 + Run the program. If you now try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
 
 Note that we don't currently have any validation in the `__init__` method, so if you can still create the 2 of Dinosaurs like this:
@@ -110,35 +162,3 @@ Note that we don't currently have any validation in the `__init__` method, so if
 ```Python
 another_card = Card("Dinosaurs", "2")
 ```
-
---- collapse ---
----
-title: What is the point of properties?
----
-Why would we want to use the `@property` and `@suit.setter` decorators to create properties instead of just writing `get_suit()` and `set_suit()` methods?
-
-There are several reasons why:
-
-- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()`.
-
-- You can use `card.suit` in two different contexts, but with identical syntax:
-
-```Python
-# Set the suit of this card
-card.suit = "clubs"
-
-# Get the suit of this card
-print(card.suit)
-```
-
-- Most importantly, if you have used properties and you need to change how the properties work, you can do so without breaking any code that uses the class. For example, the original `suit` property you wrote simply returned the suit, but let's say you want to return it in capitals. To do so, you can just change the code within the property:
-
-```python
-@property
-def suit(self):
-    return self._suit.upper()
-```
-
-Any code which uses the `suit` property will still work. However, if you had just let people access the `suit` attribute directly, you would not be able to change its implementation later.
-
---- /collapse ---
