@@ -45,7 +45,7 @@ def populate(self):
 ---
 title: Is there a more efficient way to make the list of numbers?
 ---
-Yes! Instead of writing them all out, you could use a **list comprehension**, which is a quick way of creating a new list based on an existing list.
+Yes! Instead of writing them all out, you could use **list comprehension**, which is a quick way of creating a new list based on an existing list.
 
 So, to create a list containing the numbers 2 to 10 as strings, you could use the code:
 
@@ -76,7 +76,7 @@ for suit in suits:                  # For each suit...
 self._cards = cards                 # Then point self._cards at this list
 ```
 
-However, using nested loops can make your code more complicated and it is possible to use *list comprehension* to simplify the code:
+However, using nested loops can make your code more complicated. To simplify the code, you can use use **list comprehension**:
 
 ```Python
 self._cards = [ Card(s, n) for s in suits for n in numbers ]
