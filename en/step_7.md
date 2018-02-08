@@ -2,15 +2,15 @@
 
 Now that you have a basic model of a card, it's time to create a deck.
 
-+ Create a `Deck` class. You can either do this in the same file where you wrote your `Card` class, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the `Card` class at the top of your `deck.py` file with this code:
++ Create a `Deck` class. You can either do this in the same file where you wrote your `Card` class, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the `Card` class at the top of that file with this code:
 
 ```python
 from card import Card
 ```
 
-In this line of code, `deck` is the name of the Python file containing the class, minus the `.py` extension, and `Deck` is the name of the class.
+In this line of code, `card` is the name of the Python file containing the class, minus the `.py` extension, and `Card` is the name of the class.
 
-+ Create an `__init__` method for your `Deck`. This time we won't need any parameters other than `self`, which is compulsory.
++ Create a new `Deck` class and include an `__init__` method in it. This time we won't need any parameters other than `self`, which is compulsory.
 
 ```python
 class Deck:
@@ -107,7 +107,7 @@ def __init__(self):
 
 --- hint ---
 
-You create an instance of a class by declaring a variable and making it equal to `Class()`.
+Create an instance of a class by declaring a variable and making it equal to `Class()`.
 
 --- /hint ---
 
