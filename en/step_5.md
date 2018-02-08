@@ -2,11 +2,11 @@
 
 So you can change the attributes within an object, your class will need some **properties**. 
 
-**Properties** are the special methods that either **get** or **set** the value of an attribute, and are therefore referred to as the **getter** and the **setter**.
+Properties are the special methods that either **get** or **set** the value of an attribute, and are therefore referred to as the **getter** and the **setter**.
 
 ### Getters and setters
 
-For this section, you can either watch the video below, or read the instructions.
+For this section, you can either watch the video below, or follow the written instructions.
 
 <video width="768" height="576" controls>
 <source src="resources/clip3.mp4" type="video/mp4">
@@ -20,16 +20,16 @@ my_card.suit = "clubs"
 print(my_card)
 ```
 
-However, accessing the attributes directly is not a good idea, because it allows people to do things like this:
+However, accessing attributes directly is not a good idea, because people could do things like this:
 
 ```python
 my_card.suit = "dinosaurs"
 print(my_card)
 ```
 
-Instead, let's create properties for your class: a **getter** method and a **setter** method for accessing the `suit` attribute.
+Instead, let's create properties for your class: a **getter** and a **setter** for accessing the `suit` attribute.
 
-+ First, go back to your `__init__` method and locate `self.suit`. Add an underscore before `suit` to indicate that you do not want people to access this attribute directly.
++ Before we start on this, go back to your `__init__` method and locate `self.suit`. Add an underscore `_` before `suit` to indicate that you do not want people to access this attribute directly.
 
 ```python
 def __init__(self, suit, number):
@@ -40,11 +40,9 @@ def __init__(self, suit, number):
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
 ---
-No.
+Adding an underscore is good practice and good programming style.
 
-Adding an underscore is good practice and style.
-
-However, this **will not prevent** people from changing the attribute directly, but it is a convention which indicates that they **should not** . If you want to test this, add an underscore to your code for changing the attribute to `"dinosaurs"`:
+However, the underscore **will not prevent** people from changing the attribute directly — it is a convention which indicates that they **should not** . If you want to test this, add an underscore to your code for changing the attribute to `"dinosaurs"`:
 
 ```python
 my_card._suit = "dinosaurs"
@@ -54,7 +52,7 @@ You will see that you can still change the attribute just as before.
 
 --- /collapse ---
 
-### Getter
+### Creating a getter
 
 + Go back to your `Card` class definition, add a new method called `suit`, and have it return the value of the `_suit` attribute.
 
@@ -71,7 +69,7 @@ def suit(self):
     return self._suit
 ```
 
-Now, wherever someone uses the value `my_card.suit` in their program, this getter method will be called, and the user will receive the value of `self._suit` stored within the `my_card` object. 
+Now, whenever someone uses the value `my_card.suit` in their program, this getter will be called, and the user will receive the value of `self._suit` stored within the `my_card` object. 
 
 --- collapse ---
 
@@ -85,12 +83,12 @@ In object-oriented programming, decorators allow you to add additional behaviour
 
 A decorator can be thought of as a wrapper to a method: it contains the method but it also extends its functionality.
 
-The `@property` decorator in Python needs to be added to the getter method so that the method 'becomes' a property.
+The `@property` decorator in Python needs to be added to the getter method to define the method as a property.
 
 --- /collapse ---
 
 
-### Setter
+### Creating a setter
 
 + Add another method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
 
@@ -108,9 +106,9 @@ def suit(self, suit):
 def suit(self, suit):
 ```
 
-As with the getter method, this decorator defines the method as a property. Now whenever someone tries to set the `suit` attribute, e.g. by typing `my_card.suit = "spades"`, the `@suit.setter` property will be called, and in this example, the value of `"spades"` will be passed to it as the `suit` parameter.
+As with the getter method, this decorator defines the method as a property. Now, whenever someone tries to set the `suit` attribute (e.g. by typing `my_card.suit = "spades"`), the `@suit.setter` property will be called. In this example, the value `"spades"` will be passed to it as the `suit` parameter.
 
-Note - by using getter and setter properties and decorators you can have 2 functions with the same name, one which is called when you get the value and one when you set the value.
+Notice that by using getter and setter properties and decorators, you can have two functions with the same name, one which is called when you get the value, and one which is called when you set the value.
 
 --- collapse ---
 
@@ -118,29 +116,27 @@ Note - by using getter and setter properties and decorators you can have 2 funct
 title: Why do we use properties?
 ---
 
-### Why do we use properties?
+Why would we want to use the `@property` and `.setter` decorators to create properties instead of just creating a `get_suit()` method and a `set_suit()` method?
 
-Why would we want to use the `@property` and `.setter` decorators to create properties instead of just creating a `get_suit()` and `set_suit()` method?
+There are several reasons:
 
-There are several reasons why:
-
-- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()` and `card.set_suit()`.
+- It's shorter and nicer to be able to refer to `card.suit` rather than `card.get_suit()` and `card.set_suit()`. For example:
 
 ```python
 my_suit = card.suit
 card.suit = "spades"
 ```
 
-rather than:
+is much neater than:
 
 ```python
 my_suit = card.get_suit()
 card.set_suit("spades")
 ```
 
-- You can make complex functions look like simple operations, think back to the led example on step 1, you dont have to know how to turn on and led, on() does it all for you. 
+- You can make complex functions look like simple operations. Think back to the LED example on step 1: you don't need to know the details of how to turn on an LED with your computer – `on()` does it all for you. 
 
-- If you have used properties rather than setting attributes and you need to change how the Class work, you can do so without breaking any code that uses the class. For example, the original `suit` setter you wrote simply stored the suit, but let's say you want to store it in capitals. To do so, you can just change the code within the property and all suits would be stored as capitals:
+- If you use properties rather than allowing direct access to attributes and you need to change how the class works, you can do so without breaking any code that uses the class. For example, the original `suit` setter you wrote simply stored the suit, but let's say you want to store it in capital letters. To do so, you can just change the code within the property:
 
 ```python
 @suit.setter
@@ -151,13 +147,15 @@ def suit(self, suit):
             print("That's not a suit!")
 ```
 
-Any code which uses the `suit` property will still work. However, if you had just let people access the `suit` attribute directly, you would not be able to change its implementation later.
+Now all suits will be stored as capitals, while any code that uses the `suit` property will still work.
+
+If you let people access the `suit` attribute directly, you will not be able to change any aspects of its code later.
 
 --- /collapse ---
 
 + Run the program. If you now try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
 
-Note that we don't currently have any validation in the `__init__` method, so if you can still create the 2 of Dinosaurs like this:
+Note that you currently don't have any validation in the `__init__` method, so you could still create the 2 of Dinosaurs like this:
 
 ```Python
 another_card = Card("Dinosaurs", "2")
