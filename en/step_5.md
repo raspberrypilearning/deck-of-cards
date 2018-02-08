@@ -52,7 +52,7 @@ You will see that you can still change the attribute just as before.
 
 --- /collapse ---
 
-### Creating a getter
+#### Creating a getter
 
 + Go back to your `Card` class definition, add a new method called `suit`, and have it return the value of the `_suit` attribute.
 
@@ -77,8 +77,6 @@ Now, whenever someone uses the value `my_card.suit` in their program, this gette
 title: What's a decorator?
 ---
 
-### What's a decorator?
-
 In object-oriented programming, decorators allow you to add additional behaviour (or functionality) to a class.
 
 A decorator can be thought of as a wrapper to a method: it contains the method but it also extends its functionality.
@@ -88,7 +86,7 @@ The `@property` decorator in Python needs to be added to the getter method to de
 --- /collapse ---
 
 
-### Creating a setter
+#### Creating a setter
 
 + Add another method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
 
