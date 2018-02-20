@@ -18,7 +18,7 @@ _Image by Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licens
 title: What is object-oriented programming?
 ---
 
-You have probably heard of object-oriented programming, but perhaps you are unsure about what it is. Maybe you have ven attempted to read guides or books but got lost in the jargon. 
+You have probably heard of object-oriented programming, but perhaps you are unsure about what it is. Maybe you have even attempted to read guides or books but got lost in the jargon. 
 
 Object-oriented programming is integral to many programming languages and it is simply a different style of programming. 
 
