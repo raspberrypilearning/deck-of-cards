@@ -2,7 +2,9 @@
 
 Now that you have a basic model of a card, it's time to create a deck.
 
-+ Create a `Deck` class. You can either do this in the same file where you wrote your `Card` class, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the `Card` class at the top of that file with this code:
+--- task ---
+
+Create a `Deck` class. You can either do this in the same file where you wrote your `Card` class, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the `Card` class at the top of that file with this code:
 
 ```python
 from card import Card
@@ -10,35 +12,51 @@ from card import Card
 
 In this line of code, `card` is the name of the Python file containing the class, minus the `.py` extension, and `Card` is the name of the class.
 
-+ Create a new `Deck` class and include an `__init__` method in it. This time we won't need any parameters other than `self`, which is compulsory.
+--- /task ---
+
+--- task ---
+
+Create a new `Deck` class and include an `__init__` method in it. This time we won't need any parameters other than `self`, which is compulsory.
 
 ```python
 class Deck:
 
-    def __init__(self):
+ def __init__(self):
 ```
 
-+ The `Deck` will need to store a list of cards, each of which will be a `Card` object. Add an attribute called `_cards` to the `__init__` method, and define it as an empty list for now.
+--- /task ---
+
+--- task ---
+
+The `Deck` will need to store a list of cards, each of which will be a `Card` object. Add an attribute called `_cards` to the `__init__` method, and define it as an empty list for now.
 
 ```python
 class Deck:
 
-    def __init__(self):
-        self._cards = []
+ def __init__(self):
+ self._cards = []
 ```
 
-+ Now let's write a method to populate the deck with the 52 necessary cards. Begin by creating a method called `populate`:
+--- /task ---
+
+--- task ---
+
+Now let's write a method to populate the deck with the 52 necessary cards. Begin by creating a method called `populate`:
 
 ```Python
 def populate(self):
 ```
 
-+ Inside your method, define two lists. One should contain all the possible card suits, and the other all the possible card numbers, as strings:
+--- /task ---
+
+--- task ---
+
+Inside your method, define two lists. One should contain all the possible card suits, and the other all the possible card numbers, as strings:
 
 ```Python
 def populate(self):
-    suits = ["hearts", "clubs", "diamonds", "spades"]
-    numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+ suits = ["hearts", "clubs", "diamonds", "spades"]
+ numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 ```
 
 --- collapse ---
@@ -65,14 +83,18 @@ numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
 
 --- /collapse ---
 
-+ So that `populate` generates the deck of cards, we just have to combine items from the two lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
+--- /task ---
+
+--- task ---
+
+So that `populate` generates the deck of cards, we just have to combine items from the two lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
 
 ```Python
 cards = []                          # Create an empty list of cards
 for suit in suits:                  # For each suit...
-    for number in numbers:          # For each number...
-        # Create a new Card object and add it to the list
-        cards.append( Card(suit, number) )  
+ for number in numbers:          # For each number...
+ # Create a new Card object and add it to the list
+ cards.append( Card(suit, number) )  
 self._cards = cards                 # Then point self._cards at this list
 ```
 
@@ -92,16 +114,24 @@ If you would like to know more about list comprehensions, have a look at the inf
 
 [[[generic-python-simple-list-comprehensions]]]
 
-+ Let's test whether your method properly constructs a deck. Go back to your `__init__` method, call the `populate()` method, then print out the list of cards:
+--- /task ---
+
+--- task ---
+
+Let's test whether your method properly constructs a deck. Go back to your `__init__` method, call the `populate()` method, then print out the list of cards:
 
 ```Python
 def __init__(self):
-    self._cards = []
-    self.populate()
-    print(self._cards)
+ self._cards = []
+ self.populate()
+ print(self._cards)
 ```
 
-+ Create an instance of the `Deck` class to check whether you are getting the deck you want.
+--- /task ---
+
+--- task ---
+
+Create an instance of the `Deck` class to check whether you are getting the deck you want.
 
 --- hints ---
 
@@ -134,3 +164,5 @@ You should see the following output:
 ```Python
 [2 of hearts, 3 of hearts, 4 of hearts, 5 of hearts, 6 of hearts, 7 of hearts, 8 of hearts, 9 of hearts, 10 of hearts, J of hearts, Q of hearts, K of hearts, A of hearts, 2 of clubs, 3 of clubs, 4 of clubs, 5 of clubs, 6 of clubs, 7 of clubs, 8 of clubs, 9 of clubs, 10 of clubs, J of clubs, Q of clubs, K of clubs, A of clubs, 2 of diamonds, 3 of diamonds, 4 of diamonds, 5 of diamonds, 6 of diamonds, 7 of diamonds, 8 of diamonds, 9 of diamonds, 10 of diamonds, J of diamonds, Q of diamonds, K of diamonds, A of diamonds, 2 of spades, 3 of spades, 4 of spades, 5 of spades, 6 of spades, 7 of spades, 8 of spades, 9 of spades, 10 of spades, J of spades, Q of spades, K of spades, A of spades]
 ```
+
+--- /task ---

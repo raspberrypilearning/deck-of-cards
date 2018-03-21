@@ -26,9 +26,15 @@ You can choose whether to watch the video or to use the written instructions.
 Your browser does not support the video tag, so try FireFox or Chrome.
 </video>
 
-+ Open a new Python file and save it as `card.py`.
+--- task ---
 
-+ Begin by creating a `Card` class:
+Open a new Python file and save it as `card.py`.
+
+--- /task ---
+
+--- task ---
+
+Begin by creating a `Card` class:
 
 ```python
 class Card:
@@ -48,11 +54,15 @@ The difference between a function and a method is that the method is called **on
 
 In Python, every class has a special method called `__init__` that tells it how to create (or **initialise**) an object. This particular method name always has a double underscore on either side of `init`.
 
-+ Create an `__init__` method inside your `Card` class:
+--- /task ---
+
+--- task ---
+
+Create an `__init__` method inside your `Card` class:
 
 ```python
 class Card:
-    def __init__(self):
+ def __init__(self):
 ```
 
 --- collapse ---
@@ -69,24 +79,24 @@ Outside of OOP, for two functions to share the same variable, it must be global:
 name = "Laura"
 
 def hi():
-    print("Hi " + name)
+ print("Hi " + name)
 
 def bye():
-    print("Bye " + name)
+ print("Bye " + name)
 ```
 
 Within a class, `self` can be used to share variables.
 
 ```python
 class Welcome():
-    def __init__(self):
-        self.name = "Laura"
+ def __init__(self):
+ self.name = "Laura"
 
-    def hi(self):
-        print("Hi " + self.name)
+ def hi(self):
+ print("Hi " + self.name)
 
-    def bye(self):
-        print("Bye " + self.name)
+ def bye(self):
+ print("Bye " + self.name)
 ```
 
 Here, we defined the variable `self.name` and set its value to `"Laura"` within the `__init__` method that initialises object of this class. Thus all objects will contain a variable `self.name` set to `"Laura"`. The `hi()` and `bye()` methods we defined can now use the information stored in `self.name`.
@@ -97,10 +107,16 @@ Here, we defined the variable `self.name` and set its value to `"Laura"` within 
 
 Attributes are pieces of information stored within an object, rather like a collection of variables associated with that object. The card object will begin with two attributes, `suit` and `number`, and we will prefix them with `self.` to show that they belong to the object instance.
 
-+ Add two attributes to your `__init__` method, and two parameters so that you can pass in their values as arguments when you create the object:
+--- /task ---
+
+--- task ---
+
+Add two attributes to your `__init__` method, and two parameters so that you can pass in their values as arguments when you create the object:
 
 ```python
 def __init__(self, suit, number):
-    self.suit = suit
-    self.number = number
+ self.suit = suit
+ self.number = number
 ```
+
+--- /task ---
