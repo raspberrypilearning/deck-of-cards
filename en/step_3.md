@@ -120,4 +120,3 @@ def __init__(self, suit, number):
 ```
 
 --- /task ---
-

@@ -63,4 +63,3 @@ Run the program again and check that your new way of representing the object as 
 You can also customise this representation to your own liking.
 
 --- /task ---
-

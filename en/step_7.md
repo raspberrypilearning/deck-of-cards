@@ -166,4 +166,3 @@ You should see the following output:
 ```
 
 --- /task ---
-
