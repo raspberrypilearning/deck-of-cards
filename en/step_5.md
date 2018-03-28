@@ -29,13 +29,11 @@ print(my_card)
 
 Instead, let's create properties for your class: a **getter** and a **setter** for accessing the `suit` attribute.
 
---- task ---
-
-Before we start on this, go back to your `__init__` method and locate `self.suit`. Add an underscore `_` before `suit` to indicate that you do not want people to access this attribute directly.
++ Before we start on this, go back to your `__init__` method and locate `self.suit`. Add an underscore `_` before `suit` to indicate that you do not want people to access this attribute directly.
 
 ```python
 def __init__(self, suit, number):
- self._suit = suit
+    self._suit = suit
 ```
 
 --- collapse ---
@@ -56,27 +54,19 @@ You will see that you can still change the attribute just as before.
 
 #### Creating a getter
 
---- /task ---
-
---- task ---
-
-Go back to your `Card` class definition, add a new method called `suit`, and have it return the value of the `_suit` attribute.
++ Go back to your `Card` class definition, add a new method called `suit`, and have it return the value of the `_suit` attribute.
 
 ```python
 def suit(self):
- return self._suit
+    return self._suit
 ```
 
---- /task ---
-
---- task ---
-
-Add a **decorator** to this method to say that it is a property.
++ Add a **decorator** to this method to say that it is a property.
 
 ```python
 @property
 def suit(self):
- return self._suit
+    return self._suit
 ```
 
 Now, whenever someone uses the value `my_card.suit` in their program, this getter will be called, and the user will receive the value of `self._suit` stored within the `my_card` object. 
@@ -95,27 +85,19 @@ The `@property` decorator in Python needs to be added to the getter method to de
 
 --- /collapse ---
 
+
 #### Creating a setter
 
---- /task ---
-
---- task ---
-
-Add another method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
++ Add another method. It is important that this method **is also called `suit`**. It should take a piece of data representing the new suit the user would like to set, and do a basic check to make sure that the piece of data is one of the usual suits available in a deck of cards.
 
 ```python
 def suit(self, suit):
- if suit in ["hearts", "clubs", "diamonds", "spades"]:
- self._suit = suit
- else:
- print("That's not a suit!")
+    if suit in ["hearts", "clubs", "diamonds", "spades"]:
+        self._suit = suit
+    else:
+        print("That's not a suit!")
 ```
-
---- /task ---
-
---- task ---
-
-Now add a decorator to this method to say that it is the setter for `suit`.
++ Now add a decorator to this method to say that it is the setter for `suit`.
 
 ```Python
 @suit.setter
@@ -157,10 +139,10 @@ card.set_suit("spades")
 ```python
 @suit.setter
 def suit(self, suit):
- if suit in ["hearts", "clubs", "diamonds", "spades"]:
- self._suit = suit.upper()
- else:
- print("That's not a suit!")
+        if suit in ["hearts", "clubs", "diamonds", "spades"]:
+            self._suit = suit.upper()
+        else:
+            print("That's not a suit!")
 ```
 
 Now all suits will be stored as capitals, while any code that uses the `suit` property will still work.
@@ -169,16 +151,10 @@ If you let people access the `suit` attribute directly, you will not be able to 
 
 --- /collapse ---
 
---- /task ---
-
---- task ---
-
-Run the program. If you now try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
++ Run the program. If you now try to change the card's suit to anything other than one of the suits in the list, you should see `"That's not a suit!"` appear, and the suit should not change.
 
 Note that you currently don't have any validation in the `__init__` method, so you could still create the 2 of Dinosaurs like this:
 
 ```Python
 another_card = Card("Dinosaurs", "2")
 ```
-
---- /task ---

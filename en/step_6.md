@@ -10,4 +10,3 @@ Don't forget:
 ## Challenge: aces high?
 
 - Can you add another property which gives you the value of a card as an integer? This might be different for different games: some games count all "picture cards" (J, K, Q) as worth 10, and depending on the game, the ace may be high or low. How could you represent the value of a card in your `Card` model without being tied to any particular game?
-
