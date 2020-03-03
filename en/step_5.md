@@ -40,6 +40,7 @@ def __init__(self, suit, number):
 ---
 title: Does the underscore mean the attribute cannot be changed directly?
 ---
+
 Adding an underscore is good practice and good programming style.
 
 However, the underscore **will not prevent** people from changing the attribute directly — it is a convention which indicates that they **should not** . If you want to test this, add an underscore to your code for changing the attribute to `"dinosaurs"`:
@@ -72,7 +73,6 @@ def suit(self):
 Now, whenever someone uses the value `my_card.suit` in their program, this getter will be called, and the user will receive the value of `self._suit` stored within the `my_card` object. 
 
 --- collapse ---
-
 ---
 title: What's a decorator?
 ---
@@ -84,7 +84,6 @@ A decorator can be thought of as a wrapper to a method: it contains the method b
 The `@property` decorator in Python needs to be added to the getter method to define the method as a property.
 
 --- /collapse ---
-
 
 #### Creating a setter
 
@@ -109,7 +108,6 @@ As with the getter method, this decorator defines the method as a property. Now,
 Notice that by using getter and setter properties and decorators, you can have two functions with the same name, one which is called when you get the value, and one which is called when you set the value.
 
 --- collapse ---
-
 ---
 title: Why do we use properties?
 ---

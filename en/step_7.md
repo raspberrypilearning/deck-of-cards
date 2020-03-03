@@ -45,6 +45,7 @@ def populate(self):
 ---
 title: Is there a more efficient way to make the list of numbers?
 ---
+
 Yes! Instead of writing them all out, you could use **list comprehension**, which is a quick way of creating a new list based on an existing list.
 
 So, to create a list containing the numbers 2 to 10 as strings, you could use the code:
