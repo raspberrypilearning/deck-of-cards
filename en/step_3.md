@@ -59,6 +59,7 @@ class Card:
 ---
 title: Why do I need the `self` in the brackets?
 ---
+
 A method needs context in order to work. `self` is the reference to the object, and it needs to be the first parameter passed to any `Class` method. This is because the method needs to know what it is being called on, so that it can use the data stored within the object.
 
 Let's look at an example:

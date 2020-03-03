@@ -13,7 +13,6 @@ Object-oriented programming (OOP) is a way of organising your code so it is easi
 _Image by Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
 
 --- collapse ---
-
 ---
 title: What is object-oriented programming?
 ---
