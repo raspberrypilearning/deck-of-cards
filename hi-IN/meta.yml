@@ -19,13 +19,13 @@ steps:
   - 
     title: परिचय
   - 
-    title: आपको किन चीजों की आवश्यकता होगी
+    title: आपको किन चीज़ों की जरुरत होगी
   - 
-    title: एक क्लास बनाये
+    title: एक क्लास(class) बनाएँ
   - 
-    title: ऑब्जेक्ट बनाये
+    title: ऑब्जेक्ट(object) बनाये
   - 
-    title: विशेषताएँ और गुण
+    title: विशेषताएँ(Attributes) और गुण(properties)
   - 
     title: "चुनौती: एक getter और setter जोड़ें"
   - 
