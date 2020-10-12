@@ -1,57 +1,57 @@
-class Card:
+class Kaart:
 
-    def __init__(self, suit, number):
-        self._suit = suit
-        self._number = number
+    def __init__(self, kleur, nummer):
+        self._kleur = kleur
+        self._nummer = nummer
 
     def __repr__(self):
-        return self._number + " of " + self._suit
+        return self._nummer + " van " + self._kleur
 
     @property
-    def suit(self):
-        return self._suit
+    def kleur(self):
+        return self._kleur
 
-    @suit.setter
-    def suit(self, suit):
-           if suit in ["hearts", "clubs", "diamonds", "spades"]:
-               self._suit = suit
+    @kleur.setter
+    def kleur(self, kleur):
+           if kleur in ["harten", "klaveren", "ruiten", "schoppen"]:
+               self._kleur = kleur
            else:
-               print("That's not a suit!")
+               print("Dat is geen kleur!")
 
     @property
-    def number(self):
-        return self._number
+    def nummer(self):
+        return self._nummer
 
-    @number.setter
-    def number(self, number):
-        valid = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
-        if number in valid:
-            self._number = number
+    @nummer.setter
+    def nummer(self, nummer):
+        geldig = [str(n) for n in range(2,11)] + ["B", "V", "H", "A"]
+        if nummer in geldig:
+            self._nummer = nummer
         else:
-            print("That's not a valid number")
+            print("Dat is geen geldig nummer")
 
 
-class Deck:
+class Spel:
 
     def __init__(self):
-        self._cards = []
-        self.populate()
-        #print(self._cards)
+        self._kaarten = []
+        self.bevolk()
+        #print(self._kaarten)
 
 
-    def populate(self):
-        suits = ["hearts", "clubs", "diamonds", "spades"]
-        numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
-        self._cards = [ Card(s, n) for s in suits for n in numbers ]
+    def bevolk(self):
+        kleuren = ["harten", "klaveren", "ruiten", "schoppen"]
+        nummers = [str(n) for n in range(2,11)] + ["B", "V", "H", "A"]
+        self._kaarten = [ Kaart(s, n) for s in kleuren for n in nummers ]
 
-    def populate2(self):
-        suits = ["hearts", "clubs", "diamonds", "spades"]
-        numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
-        cards = []
-        for suit in suits:
-            for number in numbers:
-                cards.append(Card(suit, number))
-        self._cards = cards
+    def bevolk2(self):
+        kleuren = ["harten", "klaveren", "ruiten", "schoppen"]
+        nummers = [str(n) for n in range(2,11)] + ["B", "V", "H", "A"]
+        kaarten = []
+        for kleur in kleuren:
+            for nummer in nummers:
+                kaarten.append(Kaart(kleur, nummer))
+        self._kaarten = kaarten
 
 
-deck = Deck()
+spel = Spel()
