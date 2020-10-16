@@ -147,7 +147,7 @@ Nu worden alle kleuren opgeslagen als hoofdletters, terwijl elke code die de eig
 
 Als je mensen rechtstreeks toegang geeft tot het attribuut `kleur`, kun je later geen enkel aspect van de code wijzigen.
 
---- / collapse ---
+--- /collapse ---
 
 + Voer het programma uit. Als je nu probeert de kaartkleur te veranderen in iets anders dan een van de kleuren in de lijst, zou je `"Dat is geen kleur!"` moeten zien verschijnen en de kleur mag niet veranderen.
 
