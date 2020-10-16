@@ -1,4 +1,4 @@
-## Creëer een class
+## Creëer een class (klasse)
 
 Een **class (klasse)** is als een sjabloon voor het maken van objecten. Beschouw een class als een uitsteekvorm voor koekjes — het is een sjabloon voor alle koekjes die je maakt. Je kunt net zo veel koekjes (objecten) maken als je wilt, en ze beginnen allemaal met hetzelfde sjabloon. 
 
