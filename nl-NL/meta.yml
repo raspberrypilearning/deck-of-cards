@@ -16,11 +16,15 @@ software: python
 version: 4
 last_tested: 2018-01-01
 steps:
-  - title: Inleiding
-  - title: Wat heb je nodig
-  - title: Creëer een class (klasse)
-  - title: Een object instantiëren
-  - title: Attributen en eigenschappen
-  - title: 'Uitdaging: voeg een getter en setter toe'
-  - title: Een spel kaarten
-  - title: 'Uitdaging: wat nog meer?'
+- title: Inleiding
+- title: Wat heb je nodig
+- title: Creëer een class (klasse)
+- title: Een object instantiëren
+  completion:
+  - engaged
+- title: Attributen en eigenschappen
+- title: 'Uitdaging: voeg een getter en setter toe'
+- title: Een spel kaarten
+  completion:
+  - internal
+- title: 'Uitdaging: wat nog meer?'

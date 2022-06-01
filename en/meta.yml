@@ -1,7 +1,8 @@
+---
 title: Deck of cards
 hero_image: images/banner.png
 description: Create a reusable object oriented model of a deck of cards
-theme: orange # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: orange
 duration: 2
 listed: true
 ingredient: false
@@ -14,12 +15,16 @@ hardware: ''
 software: python
 version: 4
 last_tested: 2018-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
 - title: Create a class
 - title: Instantiate an object
+  completion:
+  - engaged
 - title: Attributes and properties
-- title: "Challenge: add a getter and setter"
+- title: 'Challenge: add a getter and setter'
 - title: A deck of cards
-- title: "Challenge: what else?"
+  completion:
+  - internal
+- title: 'Challenge: what else?'
