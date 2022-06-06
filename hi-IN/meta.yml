@@ -19,11 +19,13 @@ last_tested: 2018-01-01
 steps:
 - title: परिचय
 - title: आपको किन चीज़ों की जरुरत होगी
-  completion: engaged
 - title: एक क्लास(class) बनाएँ
 - title: ऑब्जेक्ट(object) बनाये
+  completion:
+  - engaged
 - title: विशेषताएँ(Attributes) और गुण(properties)
 - title: 'चुनौती: एक getter और setter जोड़ें'
 - title: ताश के पत्तों का एक डेक (deck)
-  completion: internal
+  completion:
+  - internal
 - title: 'चुनौती: और क्या?'

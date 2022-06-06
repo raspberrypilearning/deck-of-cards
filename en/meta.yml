@@ -18,11 +18,13 @@ last_tested: 2018-01-01
 steps:
 - title: Introduction
 - title: What you will need
-  completion: engaged
 - title: Create a class
 - title: Instantiate an object
+  completion:
+  - engaged
 - title: Attributes and properties
 - title: 'Challenge: add a getter and setter'
 - title: A deck of cards
-  completion: internal
+  completion:
+  - internal
 - title: 'Challenge: what else?'
