@@ -1,0 +1,38 @@
+---
+title: ताश के पत्तों की गड्डी
+hero_image: images/banner.png
+description: 'ताश के पत्तों की गड्डी के पुन: प्रयोग किआ जा सकने वाला ऑब्जेक्ट ओरिएंटेड मॉडल बनाएं'
+theme: orange
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: 4, design-0, programming-4, phys-comp-0, manufacture-0, community-0
+interests: games
+technologies: python
+site_areas: projects
+hardware: ''
+software: python
+version: 4
+last_tested: 2018-01-01
+steps:
+  - 
+    title: परिचय
+  - 
+    title: आपको किन चीजों की आवश्यकता होगी
+  - 
+    title: एक क्लास बनाये
+  - 
+    title: ऑब्जेक्ट बनाये
+    completion:
+      - engaged
+  - 
+    title: विशेषताएँ और गुण
+  - 
+    title: 'चुनौती: एक getter और setter जोड़ें'
+  - 
+    title: ताश के पत्तों का एक डेक (deck)
+    completion:
+      - internal
+  - 
+    title: 'चुनौती: और क्या?'
