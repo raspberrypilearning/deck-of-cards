@@ -1,137 +1,137 @@
-## A deck of cards
+## Una baraja de cartas
 
-Now that you have a basic model of a card, it's time to create a deck.
+Ahora que tienes un modelo básico de una carta, es hora de crear un mazo.
 
-+ Create a `Deck` class. You can either do this in the same file where you wrote your `Card` class, or in a separate one. If you do it in a different file (e.g. `deck.py`), you will need to import the `Card` class at the top of that file with this code:
++ Crea una clase `Baraja`. Puedes hacer esto en el mismo archivo donde escribiste tu clase `Carta`, o en uno separado. Si lo haces en un archivo diferente (por ejemplo, `deck.py`), tendrás que importar la clase `Carta` en la parte superior de ese archivo con este código:
 
 ```python
-from card import Card
+from card import Carta
 ```
 
-In this line of code, `card` is the name of the Python file containing the class, minus the `.py` extension, and `Card` is the name of the class.
+En esta línea de código, `card` es el nombre del archivo Python que contiene la clase, menos la extensión `.py `, y `Carta` es el nombre de la clase.
 
-+ Create a new `Deck` class and include an `__init__` method in it. This time we won't need any parameters other than `self`, which is compulsory.
++ Crea una nueva clase `Baraja` e incluye un método `__init__` en él. Esta vez no necesitaremos ningún parámetro que no sea `self`, que es obligatorio.
 
 ```python
-class Deck:
+class Baraja:
 
     def __init__(self):
 ```
 
-+ The `Deck` will need to store a list of cards, each of which will be a `Card` object. Add an attribute called `_cards` to the `__init__` method, and define it as an empty list for now.
++ La `Baraja` tendrá que almacenar una lista de cartas, cada una de las cuales será un objeto `Carta`. Añade un atributo llamado `_cartas` al método `__init__`, y defínelo como una lista vacía por ahora.
 
 ```python
-class Deck:
+class Baraja:
 
     def __init__(self):
-        self._cards = []
+        self._cartas = []
 ```
 
-+ Now let's write a method to populate the deck with the 52 necessary cards. Begin by creating a method called `populate`:
++ Ahora vamos a escribir un método para llenar la baraja con las 52 cartas necesarias. Comienza creando un método llamado `completar`:
 
 ```Python
-def populate(self):
+def completar(self):
 ```
 
-+ Inside your method, define two lists. One should contain all the possible card suits, and the other all the possible card numbers, as strings:
++ Dentro del método, define dos listas. Una debe contener todos los palos posibles de la carta, y la otra todos los números posibles de la carta, como cadenas:
 
 ```Python
-def populate(self):
-    suits = ["hearts", "clubs", "diamonds", "spades"]
-    numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+def completar(self):
+    palos = ["corazones", "trebol", "diamantes", "espadas"]
+    numeros = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 ```
 
 --- collapse ---
 ---
-title: Is there a more efficient way to make the list of numbers?
+title: ¿Existe una manera más eficiente de hacer una lista de números?
 ---
 
-Yes! Instead of writing them all out, you could use **list comprehension**, which is a quick way of creating a new list based on an existing list.
+¡Sí! En lugar de escribirlos todos, puedes usar **comprensión de lista**, que es una forma rápida de crear una nueva lista basada en una lista existente.
 
-So, to create a list containing the numbers 2 to 10 as strings, you could use the code:
+Así que, para crear una lista que contenga los números de 2 a 10 como cadenas, puedes usar el código:
 
 ```Python
-numbers = [str(n) for n in range(2,11)]
+numeros = [str(n) for n in range(2,11)]
 ```
 
-This means:
-- Give me `str(n)` (the string version of n)
-- For every `n in range(2, 11)` (remember that the `range()` function will start at 2 and stop at (but not include) 11)
+Esto significa:
+- Dame `str(n)` (la versión string de n)
+- Por cada `n in range(2, 11)` (recuerda que la función `range()` comenzará en 2 y se detendrá en (pero no incluirá) 11)
 
-Then add a list containing the picture cards and the ace at the end:
+Luego añade una lista que contenga las cartas de imagen y el as al final:
 
 ```Python
-numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
+numeros = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
 ```
 
 --- /collapse ---
 
-+ So that `populate` generates the deck of cards, we just have to combine items from the two lists — for each suit, for each number, create a `Card` object. One way of doing this is with nested loops:
++ Para que `completar` genere la baraja de cartas, solo tenemos que combinar objetos de las dos listas — para cada palo, para cada número, crear un objeto `Carta`. Una forma de hacer esto es con bucles anidados:
 
 ```Python
-cards = []                          # Create an empty list of cards
-for suit in suits:                  # For each suit...
-    for number in numbers:          # For each number...
-        # Create a new Card object and add it to the list
-        cards.append( Card(suit, number) )  
-self._cards = cards                 # Then point self._cards at this list
+cartas = []                         # Crea una lista vacía de cartas
+for palo in palos:                  # Por cada palo...
+    for numero in numeros:          # Por cada número...
+        # Crea un nuevo objeto Carta y añádelo a la lista
+        cartas.append( Carta(palo, numero) )  
+self._cartas = cartas                 # Luego señale self._cartas a esta lista
 ```
 
-However, using nested loops can make your code more complicated. To simplify the code, you can use use **list comprehension**:
+Sin embargo, el uso de bucles anidados puede hacer que el código sea más complicado. Para simplificar el código, puedes utilizar una **comprensión de lista**:
 
 ```Python
-self._cards = [ Card(s, n) for s in suits for n in numbers ]
+self._cartas = [ Carta(p, n) for p in palos for n in numeros ]
 ```
 
-This code means:
-- Set `self._cards` to
-- `[ a list ]`
-- of `Card` objects
-- containing every combination of `s, n`, looping through `for s in suits` and `for n in numbers`
+Este código significa:
+- Establecer `self._cartas` a
+- `[ una lista ]`
+- de objetos `Carta`
+- que contiene cada combinación de `p, n`, haciendo un bucle a través de `for p in palos` y `for n in numeros`
 
-If you would like to know more about list comprehensions, have a look at the information below.
+Si deseas obtener más información sobre las comprensiones de listas, echa un vistazo a la siguiente información.
 
 [[[generic-python-simple-list-comprehensions]]]
 
-+ Let's test whether your method properly constructs a deck. Go back to your `__init__` method, call the `populate()` method, then print out the list of cards:
++ Vamos a probar si tu método construye correctamente una baraja. Vuelve a tu método `__init__`, llama al método `completar()`, luego imprime la lista de cartas:
 
 ```Python
 def __init__(self):
-    self._cards = []
-    self.populate()
-    print(self._cards)
+    self._cartas = []
+    self.completar()
+    print(self._cartas)
 ```
 
-+ Create an instance of the `Deck` class to check whether you are getting the deck you want.
++ Crea una instancia de la clase `Baraja` para comprobar si estás obteniendo la baraja que deseas.
 
 --- hints ---
 
 --- hint ---
 
-Create an instance of a class by declaring a variable and making it equal to `Class()`.
+Crea una instancia de una clase declarando una variable y haciéndola igual a `Clase()`.
 
 --- /hint ---
 
 --- hint ---
 
-Review how you instantiated an object of the `Card` class.
+Revisa cómo instanciaste un objeto de la clase `Carta`.
 
 --- /hint ---
 
 --- hint ---
 
-Use this code:
+Usa este código:
 
 ```Python
-my_deck = Deck()
+mi_baraja = Baraja()
 ```
 
 --- /hint ---
 
 --- /hints ---
 
-You should see the following output:
+Deberías ver el siguiente resultado:
 
 ```Python
-[2 of hearts, 3 of hearts, 4 of hearts, 5 of hearts, 6 of hearts, 7 of hearts, 8 of hearts, 9 of hearts, 10 of hearts, J of hearts, Q of hearts, K of hearts, A of hearts, 2 of clubs, 3 of clubs, 4 of clubs, 5 of clubs, 6 of clubs, 7 of clubs, 8 of clubs, 9 of clubs, 10 of clubs, J of clubs, Q of clubs, K of clubs, A of clubs, 2 of diamonds, 3 of diamonds, 4 of diamonds, 5 of diamonds, 6 of diamonds, 7 of diamonds, 8 of diamonds, 9 of diamonds, 10 of diamonds, J of diamonds, Q of diamonds, K of diamonds, A of diamonds, 2 of spades, 3 of spades, 4 of spades, 5 of spades, 6 of spades, 7 of spades, 8 of spades, 9 of spades, 10 of spades, J of spades, Q of spades, K of spades, A of spades]
+[2 de corazones, 3 de corazones, 4 de corazones, 5 de corazones, 6 de corazones, 7 de corazones, 8 de corazones, 9 de corazones, 10 de corazones, J de corazones, Q de corazones, K de corazones, A de corazones, 2 de trebol, 3 de trebol, 4 de trebol, 5 de trebol, 6 de trebol, 7 de trebol, 8 de trebol, 9 de trebol, 10 de trebol, J de trebol, Q de trebol, K de trebol, A de trebol, 2 de diamantes, 3 de diamantes, 4 de diamantes, 5 de diamantes, 6 de diamantes, 7 de diamantes, 8 de diamantes, 9 de diamantes, 10 de diamantes, J de diamantes, Q de diamantes, K de diamantes, A de diamantes, 2 de espadas, 3 de espadas, 4 de espadas, 5 de espadas, 6 de espadas, 7 de espadas, 8 de espadas, 9 de espadas, 10 de espadas, J de espadas, Q de espadas, K de espadas, A de espadas]
 ```
