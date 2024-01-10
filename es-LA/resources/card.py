@@ -1,57 +1,57 @@
-class Card:
+class Carta:
 
-    def __init__(self, suit, number):
-        self._suit = suit
-        self._number = number
+    def __init__(self, palo, numero):
+        self._palo = palo
+        self._numero = numero
 
     def __repr__(self):
-        return self._number + " of " + self._suit
+        return self._numero + " de " + self._palo
 
     @property
-    def suit(self):
-        return self._suit
+    def palo(self):
+        return self._palo
 
-    @suit.setter
-    def suit(self, suit):
-           if suit in ["hearts", "clubs", "diamonds", "spades"]:
-               self._suit = suit
+    @palo.setter
+    def palo(self, palo):
+           if palo in ["corazones", "trebol", "diamantes", "espadas"]:
+               self._palo = palo
            else:
-               print("That's not a suit!")
+               print("¡Esto no es un palo!")
 
     @property
-    def number(self):
-        return self._number
+    def numero(self):
+        return self._numero
 
-    @number.setter
-    def number(self, number):
-        valid = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
-        if number in valid:
-            self._number = number
+    @numero.setter
+    def numero(self, numero):
+        valido = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
+        if numero in valido:
+            self._numero = numero
         else:
-            print("That's not a valid number")
+            print("¡Esto no es un número válido!")
 
 
-class Deck:
+class Baraja:
 
     def __init__(self):
-        self._cards = []
-        self.populate()
-        #print(self._cards)
+        self._cartas = []
+        self.completar()
+        #print(self._cartas)
 
 
-    def populate(self):
-        suits = ["hearts", "clubs", "diamonds", "spades"]
-        numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
-        self._cards = [ Card(s, n) for s in suits for n in numbers ]
+    def completar(self):
+        palos = ["corazones", "trebol", "diamantes", "espadas"]
+        numeros = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
+        self._cartas = [ Carta(p, n) for p in palos for n in numeros ]
 
-    def populate2(self):
-        suits = ["hearts", "clubs", "diamonds", "spades"]
-        numbers = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
-        cards = []
-        for suit in suits:
-            for number in numbers:
-                cards.append(Card(suit, number))
-        self._cards = cards
+    def completar2(self):
+        palos = ["corazones", "trebol", "diamantes", "espadas"]
+        numeros = [str(n) for n in range(2,11)] + ["J", "Q", "K", "A"]
+        cartas = []
+        for palo in palos:
+            for numero in numeros:
+                cartas.append(Carta(palo, numero))
+        self._cartas = cartas
 
 
-deck = Deck()
+baraja = Baraja()
