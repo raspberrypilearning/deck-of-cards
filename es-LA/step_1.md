@@ -1,72 +1,72 @@
-## Introduction
+## Introducción
 
-Create a model of a deck of cards that can form the basis for building digital card game programs such as Poker or Gin Rummy.
+Crea un modelo de un mazo de cartas que forme la base para construir programas de juegos de cartas digitales como Poker o Rummy.
 
-### What you will make
+### Lo que harás
 
-You will learn how to use the object-oriented programming paradigm in Python to create a reusable model of a deck of cards.
+Aprenderás a utilizar el paradigma de programación orientado a objetos en Python para crear un modelo reutilizable de un mazo de cartas.
 
-Object-oriented programming (OOP) is a way of organising your code so it is easier to understand, reuse, and change. OOP allows you to combine data (variables) and functionality and wrap them together inside **objects**.
+La programación orientada a objetos (POO) es una forma de organizar tu código para que sea más fácil de entender, reutilizar y cambiar. POO te permite combinar datos (variables) y funcionalidades, y empaquetarlos juntos dentro de **objetos**.
 
-![Cards](images/cards.jpg)
+![Cartas](images/cards.jpg)
 
-_Image by Rosapicci (Own work) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons_
+_Imagen de Rosapicci (Trabajo propio) [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), a través de Wikimedia Commons_
 
 --- collapse ---
 ---
-title: What is object-oriented programming?
+title: ¿Qué es la Programación Orientada a Objetos?
 ---
 
-You have probably heard of object-oriented programming, but perhaps you are unsure about what it is. Maybe you have even attempted to read guides or books but got lost in the jargon.
+Seguramente has escuchado sobre la programación orientada a objetos, pero tal vez no estés seguro de qué es. Tal vez incluso hayas intentado leer guías o libros, pero te perdiste en la jerga.
 
-Object-oriented programming is integral to many programming languages and it is simply a different style of programming.
+La programación orientada a objetos es parte integral de muchos lenguajes de programación, y es simplemente un estilo diferente de programación.
 
-#### What is an object?
+#### ¿Qué es un objeto?
 
-Objects are used to model things in code. An object can represent a physical item, such as an LED, or it can represent a digital unit, such as a bank account or a character in a computer game. An object is basically a group of data and functions. Because you can define your own objects, you can represent anything you like with an object!
+Los objetos se utilizan para modelar cosas en código. Un objeto puede representar un elemento físico, como un LED, o puede representar una unidad digital, tal como una cuenta bancaria o un personaje en un juego de computadora. Un objeto es básicamente un grupo de datos y funciones. Dado que puedes definir tus propios objetos, ¡puedes representar cualquier cosa que desees con un objeto!
 
-#### Where would I have seen objects before?
+#### ¿Dónde habría visto objetos antes?
 
-Let’s look at an example of an LED wired up to a Raspberry Pi computer. Don’t worry if you have never wired up an LED or done other physical computing — the important thing here is the code!
+Veamos un ejemplo de un LED conectado a una computadora Raspberry Pi. No te preocupes si nunca has conectado un LED o has hecho otra informática física — ¡lo importante aquí es el código!
 
-![led connected to pin 17](images/LED-GP17.gif)
+![led conectado al pin 17](images/LED-GP17.gif)
 
-On the left of the diagram are the Raspberry Pi’s GPIO pins, which allow us to control components that are connected to them. The LED is connected to pin 17. To make the LED switch on, you would use the following Python code:
+A la izquierda del diagrama están los pines GPIO de la Raspberry Pi, los que nos permiten controlar los componentes que están conectados a ellos. El LED está conectado al pin 17. Para encender el LED, utilizarías el siguiente código de Python:
 
 ```python
 from gpiozero import LED
-red = LED(17)           
-red.on()
+rojo = LED(17)           
+rojo.on()
 ```
 
-To interact with the LED, we have created an `LED` object which represents the physical LED in code. It has the name `red` so that we can refer to that specific LED object.
+Para interactuar con el LED, hemos creado un objeto `LED` que representa el LED físico en código. Tiene el nombre `rojo` de manera que nos podamos referir a ese objeto LED específico.
 
 ```python
-red = LED(17)
+rojo = LED(17)
 ```
 
-We can wire up another LED to pin 21, and then create another object with a different name to represent it:
+Podemos conectar otro LED al pin 21, y luego crear otro objeto con un nombre diferente para representarlo:
 
 ```python
-green = LED(21)
+verde = LED(21)
 ```
 
-#### Why would I want to use objects?
+#### ¿Por qué querría usar objetos?
 
-In our example, we created an `LED` object to model a physical LED in code. We also included a command to control the LED, in this case to turn it `on`. Such commands are called methods — custom functions specifically designed to interact with an object.
+En nuestro ejemplo, creamos un objeto `LED` para modelar un LED físico en código. También incluimos un comando para controlar el LED, en este caso para encenderlo con `on`. Estos comandos se denominan métodos — funciones personalizadas específicamente diseñadas para interactuar con un objeto.
 
-One of the benefits of using object-oriented programming is that unnecessary details can be left out when we use a method. We do not need to know the specifics of exactly how a method works to be able to use it, we can just call it to achieve a desired outcome. In our example, we don’t need to know anything about the `on()` method apart from the fact that using it on our `LED` object will make the physical LED light up.
+Una de las ventajas del uso de la programación orientada a objetos es que se pueden omitir detalles innecesarios cuando utilizamos un método. No necesitamos saber exactamente cómo funciona un método para poder utilizarlo, simplemente podemos llamarlo para lograr el resultado deseado. En nuestro ejemplo, no necesitamos saber nada sobre el método `on()` aparte del hecho de que usarlo en nuestro objeto `LED` hará que el LED físico se encienda.
 
 --- /collapse ---
 
-### What you will learn
+### Lo que aprenderás
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum){:target="_blank"}:
+Este proyecto incluye elementos de los siguientes aspectos del [currículo de creación digital de Raspberry Pi](http://rpf.io/curriculum){:target="_blank"}:
 
-+ [Apply higher-order programming techniques to solve real-world problems](https://curriculum.raspberrypi.org/programming/maker/){:target="_blank"}
++ [Aplicar técnicas complejas de programación para resolver problemas del mundo real](https://curriculum.raspberrypi.org/programming/maker/){:target="_blank"}
 
-### Additional information for educators
+### Información adicional para educadores
 
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/deck-of-cards/print){:target="_blank"}.
+Si necesitas imprimir este proyecto, usa la [versión para imprimir](https://projects.raspberrypi.org/en/projects/deck-of-cards/print){:target="_blank"}.
 
-Use the link in the footer to access the GitHub repository for this project, which contains all resources (including an example finished project) in the 'en/resources' folder.
+Utiliza el link que aparece en el pie de página para acceder al repositorio de GitHub de este proyecto que contiene todos los recursos (incluyendo un ejemplo de un proyecto terminado) en la carpeta 'en/resources'.
