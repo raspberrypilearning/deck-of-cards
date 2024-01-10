@@ -1,14 +1,14 @@
-## What you will need
+## Qué necesitarás
 
 ### Hardware
 
-+ Any computer that can run Python 3
++ Cualquier computadora que pueda ejecutar Python 3
 
 ### Software
 
 + Python 3
 
-If your computer doesnt have Python 3 installed, you can either install it, or create a new Python 3 project [on Trinket](https://rpf.io/python3new).
+Si tu computadora no tiene Python 3 instalado, puedes instalarlo o crear un proyecto nuevo de Python 3 [en Trinket](https://rpf.io/python3new).
 
 [[[generic-python-install-python3]]]
 
