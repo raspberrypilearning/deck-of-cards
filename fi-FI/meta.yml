@@ -2,7 +2,7 @@
 title: Deck of cards
 hero_image: images/banner.png
 description: Create a reusable object oriented model of a deck of cards
-theme: orange #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: orange
 duration: 2
 listed: true
 ingredient: false
@@ -24,11 +24,15 @@ steps:
     title: Create a class
   - 
     title: Instantiate an object
+    completion:
+      - engaged
   - 
     title: Attributes and properties
   - 
-    title: "Challenge: add a getter and setter"
+    title: 'Challenge: add a getter and setter'
   - 
     title: A deck of cards
+    completion:
+      - internal
   - 
-    title: "Challenge: what else?"
+    title: 'Challenge: what else?'
