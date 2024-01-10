@@ -1,11 +1,11 @@
-## Challenge: what else?
+## Desafío: ¿qué más?
 
-Now that you have created `Card` and `Deck` classes, what else could you add so that you could use them to program card games? Here are some ideas:
+Ahora que has creado las clases `Carta` y `Baraja`, ¿qué más puedes añadir para poder usarlas para programar juegos de cartas? Aquí tienes algunas sugerencias:
 
-+ Add a `shuffle()` method to randomise the order of the cards in the deck.
++ Añade un método `mezclar()` para aleatorizar el orden de las cartas en la baraja.
 
-+ Add a method to check whether a particular card is present in the deck or not.
++ Añade un método para comprobar si una carta en particular está presente en la baraja o no.
 
-+ Add a `deal()` method to deal cards from the deck. How many cards will you deal to how many players?
++ Añade un método `repartir()` para repartir las cartas de la baraja. ¿Cuántas cartas repartirás a cuántos jugadores?
 
-+ Could you create a `Hand` class to model the cards stored in a player's hand?
++ ¿Podrías crear una clase `Mano ` para modelar las cartas almacenadas en la mano de un jugador?
