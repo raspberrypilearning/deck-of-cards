@@ -1,0 +1,30 @@
+---
+title: Mazo de cartas
+hero_image: images/banner.png
+description: Crea un modelo orientado a objetos reutilizable de un mazo de cartas
+theme: orange
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: 4, design-0, programming-4, phys-comp-0, manufacture-0, community-0
+interests: games
+technologies: python
+site_areas: projects
+hardware: ''
+software: python
+version: 4
+last_tested: 2018-01-01
+steps:
+  - title: Introducción
+  - title: Lo que necesitarás
+  - title: Crea una clase
+  - title: Instancia un objeto
+    completion:
+      - engaged
+  - title: Atributos y propiedades
+  - title: 'Desafío: agrega un getter y un setter'
+  - title: Un mazo de cartas
+    completion:
+      - internal
+  - title: 'Desafío: ¿qué más?'
